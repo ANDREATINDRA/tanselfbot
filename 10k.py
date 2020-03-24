@@ -281,7 +281,7 @@ def sendMentionFooter(to, text="", mids=[]):
         arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
         arr.append(arrData)
         textx += mention + str(text)
-    nadya.sendMessage(to, textx, {'AGENT_NAME':'@pratannaimjoi on Instagram', 'AGENT_LINK': 'https://www.instagram.com/pratannaimjoi', 'AGENT_ICON': "http://dl.profile.line-cdn.net/" + ptatan1983.getProfile().picturePath, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    nadya.sendMessage(to, textx, {'AGENT_NAME':'@nadya on Instagram', 'AGENT_LINK': 'https://www.instagram.com/pratannaimjoi', 'AGENT_ICON': "http://dl.profile.line-cdn.net/" + ptatan1983.getProfile().picturePath, 'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
 
 def sendMessageFooter(to, text, name, url, iconlink):
         contentMetadata = {
@@ -294,7 +294,7 @@ def sendMessageFooter(to, text, name, url, iconlink):
 
 def sendMessageWithFooter(to, text):
  nadya.reissueUserTicket()
- nadya = ptatan1983.getProfile()
+ nadya = nadya.getProfile()
  ticket = "http://line.me/ti/p/"+nadya.getUserTicket().id
  pict = "http://dl.profile.line-cdn.net/"+nadya.pictureStatus
  name = "「 TANBOTMEVERDIE✯͜͡❂➣ 」"
@@ -302,7 +302,7 @@ def sendMessageWithFooter(to, text):
      "AGENT_NAME": name,
      "AGENT_LINK": ticket
  }
- nadya.sendMessage(to, text, contentMetadata=ptatan1983)
+ nadya.sendMessage(to, text, contentMetadata=nadya)
 
 def sendMentionV10(to, text,name, url, iconlink):
     nadya.sendMessage(to, text, {'AGENT_NAME': name,'AGENT_LINK': url,'AGENT_ICON': iconlink })
