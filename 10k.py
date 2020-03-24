@@ -683,13 +683,13 @@ def bot(op):
         if op.type == 11:
             if op.param1 in protectqr:
                 try:
-                    if ptatan1983.getGroup(op.param1).preventedJoinByTicket == False:
+                    if nadya.getGroup(op.param1).preventedJoinByTicket == False:
                         if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                            ptatan1983.reissueGroupTicket(op.param1)
-                            X = ptatan1983.getGroup(op.param1)
+                            nadya.reissueGroupTicket(op.param1)
+                            X = nadya.getGroup(op.param1)
                             X.preventedJoinByTicket = True
-                            ptatan1983.updateGroup(X)
-                            ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                            nadya.updateGroup(X)
+                            nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                 except:
                     try:
                         if ki.getGroup(op.param1).preventedJoinByTicket == False:
@@ -698,7 +698,7 @@ def bot(op):
                                 X = ki.getGroup(op.param1)
                                 X.preventedJoinByTicket = True
                                 ki.updateGroup(X)
-                                ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                     except:
                         try:
                             if kk.getGroup(op.param1).preventedJoinByTicket == False:
@@ -707,7 +707,7 @@ def bot(op):
                                     X = kk.getGroup(op.param1)
                                     X.preventedJoinByTicket = True
                                     kk.updateGroup(X)
-                                    ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                    nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                         except:
                             try:
                                 if kc.getGroup(op.param1).preventedJoinByTicket == False:
@@ -716,16 +716,16 @@ def bot(op):
                                         X = kc.getGroup(op.param1)
                                         X.preventedJoinByTicket = True
                                         kc.updateGroup(X)
-                                        ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                        nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                             except:
                                 try:
-                                    if ptatan1983.getGroup(op.param1).preventedJoinByTicket == False:
+                                    if nadya.getGroup(op.param1).preventedJoinByTicket == False:
                                         if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
-                                            ptatan1983.reissueGroupTicket(op.param1)
-                                            X = ptatan1983.getGroup(op.param1)
+                                            nadya.reissueGroupTicket(op.param1)
+                                            X = nadya.getGroup(op.param1)
                                             X.preventedJoinByTicket = True
-                                            ptatan1983.updateGroup(X)
-                                            ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                            nadya.updateGroup(X)
+                                            nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                 except:
                                     try:
                                         if ki.getGroup(op.param1).preventedJoinByTicket == False:
@@ -734,7 +734,7 @@ def bot(op):
                                                 X = ki.getGroup(op.param1)
                                                 X.preventedJoinByTicket = True
                                                 ki.updateGroup(X)
-                                                ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                     except:
                                         try:
                                             if kb.getGroup(op.param1).preventedJoinByTicket == False:
@@ -743,7 +743,7 @@ def bot(op):
                                                     X = kb.getGroup(op.param1)
                                                     X.preventedJoinByTicket = True
                                                     kb.updateGroup(X)
-                                                    ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                    nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                         except:
                                             try:
                                                 if kd.getGroup(op.param1).preventedJoinByTicket == False:
@@ -752,7 +752,7 @@ def bot(op):
                                                         X = kd.getGroup(op.param1)
                                                         X.preventedJoinByTicket = True
                                                         kd.updateGroup(X)
-                                                        ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                        nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                             except:
                                                 try:
                                                     if ke.getGroup(op.param1).preventedJoinByTicket == False:
@@ -761,7 +761,7 @@ def bot(op):
                                                             X = ke.getGroup(op.param1)
                                                             X.preventedJoinByTicket = True
                                                             ke.updateGroup(X)
-                                                            ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                            nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                                 except:
                                                     try:
                                                         if kf.getGroup(op.param1).preventedJoinByTicket == False:
@@ -770,7 +770,7 @@ def bot(op):
                                                                 X = kf.getGroup(op.param1)
                                                                 X.preventedJoinByTicket = True
                                                                 kf.updateGroup(X)
-                                                                ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                                nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                                     except:
                                                         try:
                                                             if kg.getGroup(op.param1).preventedJoinByTicket == False:
@@ -779,7 +779,7 @@ def bot(op):
                                                                     X = kg.getGroup(op.param1)
                                                                     X.preventedJoinByTicket = True
                                                                     kg.updateGroup(X)
-                                                                    ptatan1983.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
+                                                                    nadya.sendMessage(op.param1, None, contentMetadata={'mid': op.param2}, contentType=13)
                                                         except:
                                                             try:
                                                                 if kh.getGroup(op.param1).preventedJoinByTicket == False:
