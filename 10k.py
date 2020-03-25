@@ -2238,9 +2238,9 @@ def bot(op):
                                                 kf.kickoutFromGroup(op.param1,[op.param2])
                                             except:
                                                 try:
-                                                    ptatan1983.inviteIntoGroup(op.param1,[op.param3])
+                                                    nadya.inviteIntoGroup(op.param1,[op.param3])
                                                     kg.acceptGroupInvitation(op.param1)
-                                                    ptatan1983.kickoutFromGroup(op.param1,[op.param2])
+                                                    nadya.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
                                                     try:
                                                         kh.inviteIntoGroup(op.param1,[op.param3])
@@ -2252,7 +2252,7 @@ def bot(op):
                                                             G.preventedJoinByTicket = False
                                                             kh.updateGroup(G)
                                                             Ticket = kh.reissueGroupTicket(op.param1)
-                                                            ptatan1983.acceptGroupInvitationByTicket(op.param1,Ticket)
+                                                            nadya.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ki.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kk.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kc.acceptGroupInvitationByTicket(op.param1,Ticket)
@@ -2304,9 +2304,9 @@ def bot(op):
                                                                                         kf.kickoutFromGroup(op.param1,[op.param2])
                                                                                     except:
                                                                                         try:
-                                                                                            ptatan1983.inviteIntoGroup(op.param1,[op.param3])
+                                                                                            nadya.inviteIntoGroup(op.param1,[op.param3])
                                                                                             kg.acceptGroupInvitation(op.param1)
-                                                                                            ptatan1983.kickoutFromGroup(op.param1,[op.param2])
+                                                                                            nadya.kickoutFromGroup(op.param1,[op.param2])
                                                                                         except:
                                                                                             try:
                                                                                                 kh.inviteIntoGroup(op.param1,[op.param3])
@@ -2368,12 +2368,12 @@ def bot(op):
                                                     kg.kickoutFromGroup(op.param1,[op.param2])
                                                 except:
                                                     try:
-                                                        ptatan1983.inviteIntoGroup(op.param1,[op.param3])
+                                                        nadya.inviteIntoGroup(op.param1,[op.param3])
                                                         kh.acceptGroupInvitation(op.param1)
-                                                        ptatan1983.kickoutFromGroup(op.param1,[op.param2])
+                                                        nadya.kickoutFromGroup(op.param1,[op.param2])
                                                     except:
                                                         try:
-                                                            G = ptatan1983.getGroup(op.param1)
+                                                            G = nadya.getGroup(op.param1)
                                                             G.preventedJoinByTicket = False
                                                             ptatan1983.updateGroup(G)
                                                             Ticket = ptatan1983.reissueGroupTicket(op.param1)
@@ -2388,10 +2388,10 @@ def bot(op):
                                                             kg.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             kh.acceptGroupInvitationByTicket(op.param1,Ticket)
                                                             ptatan1983.kickoutFromGroup(op.param1,[op.param2])                                    
-                                                            G = ptatan1983.getGroup(op.param1)
+                                                            G = nadya.getGroup(op.param1)
                                                             G.preventedJoinByTicket = True
-                                                            ptatan1983.updateGroup(G)
-                                                            Ticket = ptatan1983.reissueGroupTicket(op.param1)
+                                                            nadya.updateGroup(G)
+                                                            Ticket = nadya.reissueGroupTicket(op.param1)
                                                         except:
                                                             try:
                                                                 ki.inviteIntoGroup(op.param1,[op.param3])
@@ -2434,9 +2434,9 @@ def bot(op):
                                                                                             kg.kickoutFromGroup(op.param1,[op.param2])
                                                                                         except:
                                                                                             try:
-                                                                                                ptatan1983.inviteIntoGroup(op.param1,[op.param3])
+                                                                                                nadya.inviteIntoGroup(op.param1,[op.param3])
                                                                                                 kh.acceptGroupInvitation(op.param1)
-                                                                                                ptatan1983.kickoutFromGroup(op.param1,[op.param2])
+                                                                                                nadya.kickoutFromGroup(op.param1,[op.param2])
                                                                                             except:
                                                                                                 pass
                 return
@@ -2453,9 +2453,9 @@ def bot(op):
                 else:
                     wait["blacklist"][op.param2] = True
                     try:
-                        ptatan1983.findAndAddContactsByMid(op.param1,admin)
-                        ptatan1983.inviteIntoGroup(op.param1,admin)
-                        ptatan1983.kickoutFromGroup(op.param1,[op.param2])
+                        nadya.findAndAddContactsByMid(op.param1,admin)
+                        nadya.inviteIntoGroup(op.param1,admin)
+                        nadya.kickoutFromGroup(op.param1,[op.param2])
                     except:
                         try:
                             ki.findAndAddContactsByMid(op.param1,admin)
@@ -2569,7 +2569,7 @@ def bot(op):
 
         if op.type == 55:
             try:
-                if op.param1 in Setmain["ptatan1983readPoint"]:
+                if op.param1 in Setmain["nadyareadPoint"]:
                    if op.param2 in Setmain["ptatan1983readMember"][op.param1]:
                        pass
                    else:
@@ -2587,15 +2587,15 @@ def bot(op):
 
             if cctv['cyduk'][op.param1]==True:
                 if op.param1 in cctv['point']:
-                    Name = ptatan1983.getContact(op.param2).displayName
+                    Name = nadya.getContact(op.param2).displayName
                     if Name in cctv['sidermem'][op.param1]:
                         pass
                     else:
                         cctv['sidermem'][op.param1] += "\n~ " + Name
                         siderMembers(op.param1, [op.param2])
-                        contact = ptatan1983.getContact(op.param2)
+                        contact = nadya.getContact(op.param2)
                         image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
-                        ptatan1983.sendImageWithURL(op.param1, image)                        
+                        nadya.sendImageWithURL(op.param1, image)                        
                         
                     
         if op.type == 65:
@@ -2606,34 +2606,34 @@ def bot(op):
                     if msg_id in msg_dict:
                         if msg_dict[msg_id]["from"]:
                            if msg_dict[msg_id]["text"] == 'Gambarnya dibawah':
-                                ginfo = ptatan1983.getGroup(at)
-                                ptatan1983 = ptatan1983.getContact(msg_dict[msg_id]["from"])
+                                ginfo = nadya.getGroup(at)
+                                nadya = nadya.getContact(msg_dict[msg_id]["from"])
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
                                 xpesan =  "「 Gambar Dihapus 」\n• Pengirim : "
                                 ret_ = "• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
-                                ry = str(ptatan1983.displayName)
+                                ry = str(nadya.displayName)
                                 pesan = ''
                                 pesan2 = pesan+"@x \n"
                                 xlen = str(len(zxc)+len(xpesan))
                                 xlen2 = str(len(zxc)+len(pesan2)+len(xpesan)-1)
-                                zx = {'S':xlen, 'E':xlen2, 'M': ptatan1983.mid}
+                                zx = {'S':xlen, 'E':xlen2, 'M': nadya.mid}
                                 zx2.append(zx)
                                 zxc += pesan2
                                 text = xpesan + zxc + ret_ + ""
-                                ptatan1983.sendMessage(at, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
-                                ptatan1983.sendImage(at, msg_dict[msg_id]["data"])
+                                nadya.sendMessage(at, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
+                                nadya.sendImage(at, msg_dict[msg_id]["data"])
                            else:
-                                ginfo = ptatan1983.getGroup(at)
-                                ptatan1983 = ptatan1983.getContact(msg_dict[msg_id]["from"])
+                                ginfo = nadya.getGroup(at)
+                                nadya = nadya.getContact(msg_dict[msg_id]["from"])
                                 ret_ =  "「 Pesan Dihapus 」\n"
-                                ret_ += "• Pengirim : {}".format(str(ptatan1983.displayName))
+                                ret_ += "• Pengirim : {}".format(str(nadya.displayName))
                                 ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
                                 ret_ += "\n• Pesannya : {}".format(str(msg_dict[msg_id]["text"]))
-                                ptatan1983.sendMessage(at, str(ret_))
+                                nadya.sendMessage(at, str(ret_))
                         del msg_dict[msg_id]
                 except Exception as e:
                     print(e)
@@ -2645,15 +2645,15 @@ def bot(op):
                     msg_id = op.param2
                     if msg_id in msg_dict1:
                         if msg_dict1[msg_id]["from"]:
-                                ginfo = ptatan1983.getGroup(at)
-                                ptatan1983 = ptatan1983.getContact(msg_dict1[msg_id]["from"])
+                                ginfo = nadya.getGroup(at)
+                                nadya = nadya.getContact(msg_dict1[msg_id]["from"])
                                 ret_ =  "「 Sticker Dihapus 」\n"
-                                ret_ += "• Pengirim : {}".format(str(ptatan1983.displayName))
+                                ret_ += "• Pengirim : {}".format(str(nadya.displayName))
                                 ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict1[msg_id]["createdTime"])))
                                 ret_ += "{}".format(str(msg_dict1[msg_id]["text"]))
-                                ptatan1983.sendMessage(at, str(ret_))
-                                ptatan1983.sendImage(at, msg_dict1[msg_id]["data"])
+                                nadya.sendMessage(at, str(ret_))
+                                nadya.sendImage(at, msg_dict1[msg_id]["data"])
                         del msg_dict1[msg_id]
                 except Exception as e:
                     print(e)
@@ -2673,7 +2673,7 @@ def bot(op):
                               random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
                if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["detectMention"] == True:
-                   contact = ptatan1983.getContact(msg._from)
+                   contact = nadya.getContact(msg._from)
                    cName = contact.displayName
                    image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
                    name = re.findall(r'@(\w+)', msg.text)
@@ -2681,9 +2681,9 @@ def bot(op):
                    mentionees = mention['MENTIONEES']
                    for mention in mentionees:
                         if mention ['M'] in Bots:
-                           ptatan1983.sendImageWithURL(msg.to, image)
-                           ptatan1983.sendMessage(msg.to, wait["Respontag"])
-                           ptatan1983.sendMessage(msg.to, None, contentMetadata={"STKID":"52114143","STKPKGID":"11539","STKVER":"1"}, contentType=7)
+                           nadya.sendImageWithURL(msg.to, image)
+                           nadya.sendMessage(msg.to, wait["Respontag"])
+                           nadya.sendMessage(msg.to, None, contentMetadata={"STKID":"52114143","STKPKGID":"11539","STKVER":"1"}, contentType=7)
                            break
                if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["Mentiongift"] == True:
@@ -2696,8 +2696,8 @@ def bot(op):
                            plihth = random.choice(idth)
                            jenis = ["5","6","7","8"]
                            plihjenis = random.choice(jenis)
-                           ptatan1983.sendMessage(msg.to, "Ye ngetag ngetag, lu minta digift ya? cek PersonalChat bos, udah gue gift tuh. Jangan lupa bilang makasih yak!")
-                           ptatan1983.sendMessage(msg._from, None, contentMetadata={"PRDID":plihth,"PRDTYPE":"THEME","MSGTPL":plihjenis}, contentType=9)
+                           nadya.sendMessage(msg.to, "Ye ngetag ngetag, lu minta digift ya? cek PersonalChat bos, udah gue gift tuh. Jangan lupa bilang makasih yak!")
+                           nadya.sendMessage(msg._from, None, contentMetadata={"PRDID":plihth,"PRDTYPE":"THEME","MSGTPL":plihjenis}, contentType=9)
                            break                       
                if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["Mentionkick"] == True:
@@ -2706,23 +2706,23 @@ def bot(op):
                    mentionees = mention['MENTIONEES']
                    for mention in mentionees:
                         if mention ['M'] in Bots:
-                           ptatan1983.sendMessage(msg.to, "Jangan tag saya....")
-                           ptatan1983.kickoutFromGroup(msg.to, [msg._from])
+                           nadya.sendMessage(msg.to, "Jangan tag saya....")
+                           nadya.kickoutFromGroup(msg.to, [msg._from])
                            break
                if msg.contentType == 7:
                  if wait["sticker"] == True:
                     msg.contentType = 0
-                    ptatan1983.sendMessage(msg.to,"「Cek ID Sticker」\n🐚 STKID : " + msg.contentMetadata["STKID"] + "\n🐚 STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n🐚 STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
+                    nadya.sendMessage(msg.to,"「Cek ID Sticker」\n🐚 STKID : " + msg.contentMetadata["STKID"] + "\n🐚 STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n🐚 STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
                if msg.contentType == 13:
                  if wait["contact"] == True:
                     msg.contentType = 0
-                    ptatan1983.sendMessage(msg.to,msg.contentMetadata["mid"])
+                    nadya.sendMessage(msg.to,msg.contentMetadata["mid"])
                     if 'displayName' in msg.contentMetadata:
-                        contact = ptatan1983.getContact(msg.contentMetadata["mid"])
-                        path = ptatan1983.getContact(msg.contentMetadata["mid"]).picturePath
+                        contact = nadya.getContact(msg.contentMetadata["mid"])
+                        path = nadya.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
-                        ptatan1983.sendMessage(msg.to,"💀 Nama: " + msg.contentMetadata["displayName"] + "\n💀 MID: " + msg.contentMetadata["mid"] + "\n💀 Status: " + contact.statusMessage + "\n💀 Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
-                        ptatan1983.sendImageWithURL(msg.to, image)
+                        nadya.sendMessage(msg.to,"💀 Nama: " + msg.contentMetadata["displayName"] + "\n💀 MID: " + msg.contentMetadata["mid"] + "\n💀 Status: " + contact.statusMessage + "\n💀 Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        nadya.sendImageWithURL(msg.to, image)
 
         if op.type == 25 or op.type == 26:
             msg = op.message
@@ -2734,7 +2734,7 @@ def bot(op):
                 msg_dict[msg.id] = {"text":msg.text,"from":msg._from,"createdTime":msg.createdTime}
                 
             if msg.contentType == 1:
-                    path = ptatan1983.downloadObjectMsg(msg_id)
+                    path = nadya.downloadObjectMsg(msg_id)
                     msg_dict[msg.id] = {"text":'Gambarnya dibawah',"data":path,"from":msg._from,"createdTime":msg.createdTime}
             if msg.contentType == 7:
                    stk_id = msg.contentMetadata["STKID"]
@@ -2748,7 +2748,7 @@ def bot(op):
                    query = int(stk_id)
                    if type(query) == int:
                             data = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+str(query)+'/ANDROID/sticker.png'
-                            path = ptatan1983.downloadFileURL(data)
+                            path = nadya.downloadFileURL(data)
                             msg_dict1[msg.id] = {"text":str(ret_),"data":path,"from":msg._from,"createdTime":msg.createdTime}
                             
             if msg.toType == 0 or msg.toType == 2:
@@ -2759,87 +2759,87 @@ def bot(op):
                if msg.contentType == 7:
                  if wait["sticker"] == True:
                     msg.contentType = 0
-                    ptatan1983.sendMessage(msg.to,"STKID : " + msg.contentMetadata["STKID"] + "\nSTKPKGID : " + msg.contentMetadata["STKPKGID"] + "\nSTKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
+                    nadya.sendMessage(msg.to,"STKID : " + msg.contentMetadata["STKID"] + "\nSTKPKGID : " + msg.contentMetadata["STKPKGID"] + "\nSTKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
                if msg.contentType == 13:
                  if wait["contact"] == True:
                     msg.contentType = 0
-                    ptatan1983.sendMessage(msg.to,msg.contentMetadata["mid"])
+                    nadya.sendMessage(msg.to,msg.contentMetadata["mid"])
                     if 'displayName' in msg.contentMetadata:
-                        contact = ptatan1983.getContact(msg.contentMetadata["mid"])
-                        path = aditmadzs.getContact(msg.contentMetadata["mid"]).picturePath
+                        contact = nadya.getContact(msg.contentMetadata["mid"])
+                        path = nadya.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
-                        ptatan1983.sendMessage(msg.to,"»» Nama : " + msg.contentMetadata["displayName"] + "\n»» MID : " + msg.contentMetadata["mid"] + "\n»» Status Msg : " + contact.statusMessage + "\n»» Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
-                        ptatan1983.sendImageWithURL(msg.to, image)
+                        nadya.sendMessage(msg.to,"»» Nama : " + msg.contentMetadata["displayName"] + "\n»» MID : " + msg.contentMetadata["mid"] + "\n»» Status Msg : " + contact.statusMessage + "\n»» Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        nadya.sendImageWithURL(msg.to, image)
 #ADD Bots
                if msg.contentType == 13:
                  if msg._from in admin:
                   if wait["addbots"] == True:
                     if msg.contentMetadata["mid"] in Bots:
-                        ptatan1983.sendMessage(msg.to,"Contact itu sudah jadi anggota bot")
+                        nadya.sendMessage(msg.to,"Contact itu sudah jadi anggota bot")
                         wait["addbots"] = True
                     else:
                         Bots.append(msg.contentMetadata["mid"])
                         wait["addbots"] = True
-                        ptatan1983.sendMessage(msg.to,"Berhasil menambahkan ke anggota bot")
+                        nadya.sendMessage(msg.to,"Berhasil menambahkan ke anggota bot")
                  if wait["dellbots"] == True:
                     if msg.contentMetadata["mid"] in Bots:
                         Bots.remove(msg.contentMetadata["mid"])
-                        ptatan1983.sendMessage(msg.to,"Berhasil menghapus dari anggota bot")
+                        nadya.sendMessage(msg.to,"Berhasil menghapus dari anggota bot")
                     else:
                         wait["dellbots"] = True
-                        ptatan1983.sendMessage(msg.to,"Contact itu bukan anggota bot Aditmadzs")
+                        nadya.sendMessage(msg.to,"Contact itu bukan anggota bot Aditmadzs")
 #ADD STAFF
                  if msg._from in admin:
                   if wait["addstaff"] == True:
                     if msg.contentMetadata["mid"] in staff:
-                        ptatan1983.sendMessage(msg.to,"Contact itu sudah jadi staff")
+                        nadya.sendMessage(msg.to,"Contact itu sudah jadi staff")
                         wait["addstaff"] = True
                     else:
                         staff.append(msg.contentMetadata["mid"])
                         wait["addstaff"] = True
-                        ptatan1983.sendMessage(msg.to,"Berhasil menambahkan ke staff")
+                        nadya.sendMessage(msg.to,"Berhasil menambahkan ke staff")
                  if wait["dellstaff"] == True:
                     if msg.contentMetadata["mid"] in staff:
                         staff.remove(msg.contentMetadata["mid"])
-                        ptatan1983.sendMessage(msg.to,"Berhasil menghapus dari staff")
+                        nadya.sendMessage(msg.to,"Berhasil menghapus dari staff")
                         wait["dellstaff"] = True
                     else:
                         wait["dellstaff"] = True
-                        ptatan1983.sendMessage(msg.to,"Contact itu bukan staff")
+                        nadya.sendMessage(msg.to,"Contact itu bukan staff")
 #ADD ADMIN
                  if msg._from in admin:
                   if wait["addadmin"] == True:
                     if msg.contentMetadata["mid"] in admin:
-                        ptatan1983.sendMessage(msg.to,"Contact itu sudah jadi admin")
+                        nadya.sendMessage(msg.to,"Contact itu sudah jadi admin")
                         wait["addadmin"] = True
                     else:
                         admin.append(msg.contentMetadata["mid"])
                         wait["addadmin"] = True
-                        ptatan1983.sendMessage(msg.to,"Berhasil menambahkan ke admin")
+                        nadya.sendMessage(msg.to,"Berhasil menambahkan ke admin")
                  if wait["delladmin"] == True:
                     if msg.contentMetadata["mid"] in admin:
                         admin.remove(msg.contentMetadata["mid"])
-                        ptatan1983.sendMessage(msg.to,"Berhasil menghapus dari admin")
+                        nadya.sendMessage(msg.to,"Berhasil menghapus dari admin")
                     else:
                         wait["delladmin"] = True
-                        ptatan1983.sendMessage(msg.to,"Contact itu bukan admin")
+                        nadya.sendMessage(msg.to,"Contact itu bukan admin")
 #ADD BLACKLIST
                  if msg._from in admin:
                   if wait["wblacklist"] == True:
                     if msg.contentMetadata["mid"] in wait["blacklist"]:
-                        ptatan1983.sendMessage(msg.to,"Contact itu sudah ada di blacklist")
+                        nadya.sendMessage(msg.to,"Contact itu sudah ada di blacklist")
                         wait["wblacklist"] = True
                     else:
                         wait["blacklist"][msg.contentMetadata["mid"]] = True
                         wait["wblacklist"] = True
-                        ptatan1983.sendMessage(msg.to,"Berhasil menambahkan ke blacklist user")
+                        nadya.sendMessage(msg.to,"Berhasil menambahkan ke blacklist user")
                   if wait["dblacklist"] == True:
                     if msg.contentMetadata["mid"] in wait["blacklist"]:
                         del wait["blacklist"][msg.contentMetadata["mid"]]
-                        ptatan1983.sendMessage(msg.to,"Berhasil menghapus dari blacklist user")
+                        nadya.sendMessage(msg.to,"Berhasil menghapus dari blacklist user")
                     else:
                         wait["dblacklist"] = True
-                        ptatan1983.sendMessage(msg.to,"Contact itu tidak ada di blacklist")
+                        nadya.sendMessage(msg.to,"Contact itu tidak ada di blacklist")
 #UPDATE FOTO
                if msg.contentType == 1:
                  if msg._from in admin:
