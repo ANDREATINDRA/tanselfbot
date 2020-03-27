@@ -716,7 +716,7 @@ def bot(op):
         if op.type == 11:
             if op.param1 in protectqr:
                 try:
-                    if boy.getGroup(op.param1).preventedJoinByTicket == False:
+                    if ptatan1983.getGroup(op.param1).preventedJoinByTicket == False:
                         if op.param2 not in Bots and op.param2 not in owner and op.param2 not in admin and op.param2 not in staff:
                             ptatan1983.reissueGroupTicket(op.param1)
                             X = ptatan1983.getGroup(op.param1)
@@ -988,7 +988,7 @@ def bot(op):
                         group = ptatan1983.getGroup(op.param1)
                         gMembMids = [contact.mid for contact in group.invitee]
                         for _mid in gMembMids:
-                            boy.cancelGroupInvitation(op.param1,[_mid])
+                            ptatan1983.cancelGroupInvitation(op.param1,[_mid])
                     except:
                         try:
                             group = k1.getGroup(op.param1)
@@ -1807,7 +1807,7 @@ def bot(op):
                                 purl = "\n• Post URL : {}".format(str(msg.contentMetadata["postEndUrl"]).replace("line://","https://line.me/R/"))
                                 ret_ += purl
                                 ret_ += text
-                            boy.sendMessage(to, str(ret_))
+                            ptatan1983.sendMessage(to, str(ret_))
                             channel.like(url[25:58], url[66:], likeType=1006)
                             channel.comment(url[25:58], url[66:], wait["message"])
 
@@ -1840,14 +1840,14 @@ def bot(op):
                         G.prevenJoinByTicket = False
                         sw.updateGroup(G)
                         Ticket = sw.reissueGroupTicket(op.param1)
-                        boy.acceptGroupInvitationByTicket(op.param1,Ticket)
+                        ptatan1983.acceptGroupInvitationByTicket(op.param1,Ticket)
                         sw.kickoutFromGroup(op.param1,[op.param2])
                         G.prevenJoinByTicket = True
                         sw.updateGroup(G)
                         wait["blacklist"][op.param2] = True
                         sw.leaveGroup(op.param1)
-                        boy.inviteIntoGroup(op.param1,[Zmid])
-                        boy.inviteIntoGroup(op.param1,[admin])
+                        ptatan1983.inviteIntoGroup(op.param1,[Zmid])
+                        ptatan1983.inviteIntoGroup(op.param1,[admin])
                     else:
                        pass
                         
@@ -1883,9 +1883,9 @@ def bot(op):
                 if msg._from in admin:
                   if wait["invite"] == True:
                     msg.contentType = 0
-                    contact = boy.getContact(msg.contentMetadata["mid"])
+                    contact = ptatan1983.getContact(msg.contentMetadata["mid"])
                     invite = msg.contentMetadata["mid"]
-                    groups = boy.getGroup(msg.to)
+                    groups = ptatan1983.getGroup(msg.to)
                     pending = groups.invitee
                     targets = []
                     for s in groups.members:
@@ -1899,8 +1899,8 @@ def bot(op):
                     else:
                          for target in targets:
                             try:
-                                boy.findAndAddContactsByMid(target)
-                                boy.inviteIntoGroup(msg.to,[target])
+                                ptatan1983.findAndAddContactsByMid(target)
+                                ptatan1983.inviteIntoGroup(msg.to,[target])
                                 fira = boy.getContact(target)
                                 zx = ""
                                 zxc = ""
@@ -1916,11 +1916,11 @@ def bot(op):
                                 zx2.append(zx)
                                 zxc += pesan2
                                 text = xpesan + zxc + ret_ + ""
-                                boy.sendMessage(msg.to, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
+                                ptatan1983.sendMessage(msg.to, text, contentMetadata={'MENTION':str('{"MENTIONEES":'+json.dumps(zx2).replace(' ','')+'}')}, contentType=0)
                                 wait["invite"] = False
                                 break
                             except:
-                                boy.sendText(msg.to,"Limit boss")
+                                ptatan1983.sendText(msg.to,"Limit boss")
                                 wait["invite"] = False
                                 break
 
@@ -1930,12 +1930,12 @@ def bot(op):
                 if wait["invite"] == True:
                     _name = msg.contentMetadata["displayName"]
                     invite = msg.contentMetadata["mid"]
-                    groups = boy.getGroup(msg.to)
+                    groups = ptatan1983.getGroup(msg.to)
                     pending = groups.invitee
                     targets = []
                     for s in groups.members:
                         if _name in s.displayName:
-                            boy.sendText(msg.to, _name + "sᴜᴅᴀʜ ᴅɪ ᴅᴀʟᴀᴍ ɢʀᴜᴘ")
+                            ptatan1983.sendText(msg.to, _name + "sᴜᴅᴀʜ ᴅɪ ᴅᴀʟᴀᴍ ɢʀᴜᴘ")
                         else:
                             targets.append(invite)
                     if targets == []:
@@ -1943,13 +1943,13 @@ def bot(op):
                     else:
                         for target in targets:
                             try:
-                                boy.findAndAddContactsByMid(target)
-                                boy.inviteIntoGroup(msg.to,[target])
-                                boy.sendText(msg.to,"Invite " + _name)
+                                ptatan1983.findAndAddContactsByMid(target)
+                                ptatan1983.inviteIntoGroup(msg.to,[target])
+                                ptatan1983 " + _name)
                                 wait["invite"] = False
                                 break                              
                             except:             
-                                    boy.sendText(msg.to,"ᴇʀʀᴏʀ")
+                                    ptatan1983.sendText(msg.to,"ᴇʀʀᴏʀ")
                                     wait["invite"] = False
                                     break
 #_______________________________________ __________
