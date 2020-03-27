@@ -4288,19 +4288,19 @@ def bot(op):
                           if wait["selfbot"] == True:
                            if msg._from in admin:
                              if msg.toType == 2:
-                                group = ptatan1983.getGroup(to)
+                                group = nadya.getGroup(to)
                                 members = [mem.mid for mem in group.members]
                                 jmlh = int(wait["limit"])
-                                ptatan1983.sendMessage(msg.to, "Berhasil mengundang {} undangan Call Grup".format(str(wait["limit"])))
+                                nadya.sendMessage(msg.to, "Berhasil mengundang {} undangan Call Grup".format(str(wait["limit"])))
                                 if jmlh <= 1000000:
                                   for x in range(jmlh):
                                      try:
                                         call.acquireGroupCallRoute(to)
                                         call.inviteIntoGroupCall(to, contactIds=members)
                                      except Exception as e:
-                                        ptatan1983.sendMessage(msg.to,str(e))
+                                        nadya.sendMessage(msg.to,str(e))
                                 else:
-                                    ptatan1983.sendMessage(msg.to,"KEBANYAKAN BANGSAT!")
+                                    nadya.sendMessage(msg.to,"KEBANYAKAN BANGSAT!")
 
                         elif 'Run: ' in msg.text:
                           if wait["selfbot"] == True:
@@ -4311,7 +4311,7 @@ def bot(op):
                               jumlah = int(korban2[1])
                               if jumlah <= 1000000:
                                   for var in range(0,jumlah):
-                                      ptatan1983.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
+                                      nadya.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
                                       ki.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
                                       kk.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
                                       kc.sendMessage(midd, None, contentMetadata={'PRDID': 'a0768339-c2d3-4189-9653-2909e9bb6f58', 'PRDTYPE': 'THEME', 'MSGTPL': '6'}, contentType=9)
@@ -4332,7 +4332,7 @@ def bot(op):
                               jumlah = int(korban2[1])
                               if jumlah <= 1000000:
                                   for var in range(0,jumlah):
-                                      ptatan1983.sendMessage(midd, str(Setmain["ptatan1983message"]))
+                                      nadya.sendMessage(midd, str(Setmain["ptatan1983message"]))
                                       ki.sendMessage(midd, str(Setmain["ptatan1983message"]))
                                       kk.sendMessage(midd, str(Setmain["ptatan1983message"]))
                                       kc.sendMessage(midd, str(Setmain["ptatan1983message"]))
@@ -4347,17 +4347,17 @@ def bot(op):
                         elif 'Mytoken' in msg.text:
                           if wait["selfbot"] == True:
                            if msg._from in admin:
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ \n"+ptatan1983.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 1\n"+ki.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 2\n"+kk.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 3\n"+kc.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 4\n"+kb.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 5\n"+kd.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 6\n"+ke.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 7\n"+kf.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 8\n"+kg.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 9\n"+kh.authToken)
-                               ptatan1983.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 10\n"+sw.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ \n"+ptatan1983.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 1\n"+ki.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 2\n"+kk.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 3\n"+kc.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 4\n"+kb.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 5\n"+kd.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 6\n"+ke.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 7\n"+kf.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 8\n"+kg.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 9\n"+kh.authToken)
+                               nadya.sendMessage(msg.to,"BY:TANBOTMEVERDIE✯͜͡❂➣ 10\n"+sw.authToken)
  
 #===========Settings============#
                         elif 'Welcome ' in msg.text:
@@ -4368,17 +4368,17 @@ def bot(op):
                                        msgs = "Welcome Msg sudah aktif"
                                   else:
                                        welcome.append(msg.to)
-                                       ginfo = ptatan1983.getGroup(msg.to)
+                                       ginfo = nadya.getGroup(msg.to)
                                        msgs = "Welcome Msg diaktifkan\nDi Group : " +str(ginfo.name)
-                                  ptatan1983.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  nadya.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in welcome:
                                          welcome.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Welcome Msg dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Welcome Msg sudah tidak aktif"
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
                                     
 #===========Protection============#                                    
 
@@ -4390,17 +4390,17 @@ def bot(op):
                                        msgs = "Protect url sudah aktif"
                                   else:
                                        protectqr.append(msg.to)
-                                       ginfo = ptatan1983.getGroup(msg.to)
+                                       ginfo = nadya.getGroup(msg.to)
                                        msgs = "Protect url diaktifkan\nDi Group : " +str(ginfo.name)
                                   ptatan1983.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectqr:
                                          protectqr.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Protect url dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Protect url sudah tidak aktif"
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
 
                         elif 'Protectkick ' in msg.text:
                            if msg._from in admin:
@@ -4410,17 +4410,17 @@ def bot(op):
                                        msgs = "Protect kick sudah aktif"
                                   else:
                                        protectkick.append(msg.to)
-                                       ginfo = ptatan1983.getGroup(msg.to)
+                                       ginfo = nadya.getGroup(msg.to)
                                        msgs = "Protect kick diaktifkan\nDi Group : " +str(ginfo.name)
                                   ptatan1983.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectkick:
                                          protectkick.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Protect kick dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Protect kick sudah tidak aktif"
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
 
                         elif 'protectjoin ' in msg.text:
                            if msg._from in admin:
@@ -4430,17 +4430,17 @@ def bot(op):
                                        msgs = "Protect join sudah aktif"
                                   else:
                                        protectjoin.append(msg.to)
-                                       ginfo = ptatan1983.getGroup(msg.to)
+                                       ginfo = nadya.getGroup(msg.to)
                                        msgs = "Protect join diaktifkan\nDi Group : " +str(ginfo.name)
-                                  ptatan1983.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  nadya.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectjoin:
                                          protectjoin.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Protect join dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Protect join sudah tidak aktif"
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
 
                         elif 'Protectcancel ' in msg.text:
                            if msg._from in admin:
@@ -4450,17 +4450,17 @@ def bot(op):
                                        msgs = "Protect cancel sudah aktif"
                                   else:
                                        protectcancel.append(msg.to)
-                                       ginfo = ptatan1983.getGroup(msg.to)
+                                       ginfo = nadya.getGroup(msg.to)
                                        msgs = "Protect cancel diaktifkan\nDi Group : " +str(ginfo.name)
-                                  ptatan1983.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  nadya.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectcancel:
                                          protectcancel.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Protect cancel dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Protect cancel sudah tidak aktif"
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
                                     
                         elif 'Protectinvite ' in msg.text:
                            if msg._from in admin:
@@ -4470,17 +4470,17 @@ def bot(op):
                                        msgs = "Protect invite sudah aktif"
                                   else:
                                        protectinvite.append(msg.to)
-                                       ginfo = ptatan1983.getGroup(msg.to)
+                                       ginfo = nadya.getGroup(msg.to)
                                        msgs = "Protect invite diaktifkan\nDi Group : " +str(ginfo.name)
-                                  ptatan1983.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  nadya.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectinvite:
                                          protectinvite.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Protect invite dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Protect invite sudah tidak aktif"
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                                 
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                                 
 
                         elif 'Blockjs ' in msg.text:
                            if msg._from in admin:
@@ -4490,17 +4490,17 @@ def bot(op):
                                        msgs = "Pro JS sudah aktif"
                                   else:
                                        protectantijs.append(msg.to)
-                                       ginfo = ptatan1983.getGroup(msg.to)
+                                       ginfo = nadya.getGroup(msg.to)
                                        msgs = "Pro JS diaktifkan\nDi Group : " +str(ginfo.name)
-                                  ptatan1983.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  nadya.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectantijs:
                                          protectantijs.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Pro JS dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Pro JS sudah tidak aktif"
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                                 
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                                 
 
                         elif 'Ghost ' in msg.text:
                            if msg._from in admin:
@@ -4510,17 +4510,17 @@ def bot(op):
                                        msgs = "Ghost sudah aktif"
                                   else:
                                        ghost.append(msg.to)
-                                       ginfo = ptatan1983.getGroup(msg.to)
+                                       ginfo = nadya.getGroup(msg.to)
                                        msgs = "Ghost diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  nadya.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in ghost:
                                          ghost.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Ghost dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Ghost sudah tidak aktif"
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                                 
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)                                                 
 
                         elif 'Allpro ' in msg.text:
                            if msg._from in admin:
@@ -4543,13 +4543,13 @@ def bot(op):
                                   else:
                                       protectjoin.append(msg.to)
                                   if msg.to in protectcancel:
-                                      ginfo = ptatan1983.getGroup(msg.to)
+                                      ginfo = nadya.getGroup(msg.to)
                                       msgs = "ALL protect sudah on\nDi Group : " +str(ginfo.name)
                                   else:
                                       protectcancel.append(msg.to)
-                                      ginfo = ptatan1983.getGroup(msg.to)
+                                      ginfo = nadya.getGroup(msg.to)
                                       msgs = "Sudah mengaktifkan semua protect\nDi Group : " +str(ginfo.name)
-                                  ptatan1983.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  nadya.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in protectqr:
                                          protectqr.remove(msg.to)
@@ -4569,12 +4569,12 @@ def bot(op):
                                          msgs = ""
                                     if msg.to in protectcancel:
                                          protectcancel.remove(msg.to)
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "ALL protect sudah off\nDi Group : " +str(ginfo.name)
                                     else:
-                                         ginfo = ptatan1983.getGroup(msg.to)
+                                         ginfo = nadya.getGroup(msg.to)
                                          msgs = "Sudah menonaktifkan semua protect\nDi Group : " +str(ginfo.name)
-                                    ptatan1983.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    nadya.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
 
 #===========KICKOUT============#
                         elif ("Nk " in msg.text):
@@ -4588,17 +4588,17 @@ def bot(op):
                                for target in targets:
                                    if target not in Bots:
                                        try:
-                                           G = ptatan1983.getGroup(msg.to)
+                                           G = nadya.getGroup(msg.to)
                                            G.preventedJoinByTicket = False
-                                           ptatan1983.updateGroup(G)
+                                           nadya.updateGroup(G)
                                            invsend = 0
-                                           Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                           Ticket = nadya.reissueGroupTicket(msg.to)
                                            sw.acceptGroupInvitationByTicket(msg.to,Ticket)
                                            sw.kickoutFromGroup(msg.to, [target])
                                            sw.leaveGroup(msg.to)
-                                           X = ptatan1983.getGroup(msg.to)
+                                           X = nadya.getGroup(msg.to)
                                            X.preventedJoinByTicket = True
-                                           ptatan1983.updateGroup(X)
+                                           nadya.updateGroup(X)
                                        except:
                                            pass
 
@@ -4620,11 +4620,11 @@ def bot(op):
                         elif text.lower() == 'super':
                             if msg._from in admin:
                                 if msg.toType == 2:
-                                    gs = ptatan1983.getGroup(msg.to)
+                                    gs = nadya.getGroup(msg.to)
                                 gs.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(gs)
+                                nadya.updateGroup(gs)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 ptatan1983.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 ki.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 kk.acceptGroupInvitationByTicket(msg.to,Ticket)
@@ -4641,12 +4641,12 @@ def bot(op):
                                     targets.append(g.mid)
                                 targets.remove(mid)
                                 if targets == []:
-                                    ptatan1983.sendText(msg.to,"MAX KICK OUT BYE")
+                                    nadya.sendText(msg.to,"MAX KICK OUT BYE")
                                 else:
                                     for target in targets:
                                       if target not in Bots:
                                         try:
-                                            klist=[ptatan1983s,ki,kk,kc,kb,kd,ke,kf,kg,kh]
+                                            klist=[nadya3s,ki,kk,kc,kb,kd,ke,kf,kg,kh]
                                             kicker=random.choice(klist)
                                             kicker.kickoutFromGroup(msg.to,[target])
                                             print (msg.to,[g.mid])
@@ -4667,7 +4667,7 @@ def bot(op):
                                            admin[target] = True
                                            f=codecs.open('admin.json','w','utf-8')
                                            json.dump(admin, f, sort_keys=True, indent=4,ensure_ascii=False)                                             
-                                           ptatan1983.sendMessage(msg.to,"Berhasil menambahkan admin")
+                                           nadya.sendMessage(msg.to,"Berhasil menambahkan admin")
                                        except:
                                            pass
 
@@ -4682,7 +4682,7 @@ def bot(op):
                                for target in targets:
                                        try:
                                            staff.append(target)
-                                           ptatan1983.sendMessage(msg.to,"Berhasil menambahkan staff")
+                                           nadya.sendMessage(msg.to,"Berhasil menambahkan staff")
                                        except:
                                            pass
 
@@ -4697,7 +4697,7 @@ def bot(op):
                                for target in targets:
                                        try:
                                            Bots.append(target)
-                                           ptatan1983.sendMessage(msg.to,"Berhasil menambahkan bot")
+                                           nadya.sendMessage(msg.to,"Berhasil menambahkan bot")
                                        except:
                                            pass
 
@@ -4714,7 +4714,7 @@ def bot(op):
                                            del admin[target]
                                            f=codecs.open('admin.json','w','utf-8')
                                            json.dump(admin, f, sort_keys=True, indent=4,ensure_ascii=False)                                            
-                                           ptatan1983.sendMessage(msg.to,"Berhasil menghapus admin")
+                                           nadya.sendMessage(msg.to,"Berhasil menghapus admin")
                                        except:
                                            pass
 
@@ -4729,7 +4729,7 @@ def bot(op):
                                    if target not in Madzs:
                                        try:
                                            staff.remove(target)
-                                           ptatan1983.sendMessage(msg.to,"Berhasil menghapus Staff")
+                                           nadya.sendMessage(msg.to,"Berhasil menghapus Staff")
                                        except:
                                            pass
 
@@ -4744,39 +4744,39 @@ def bot(op):
                                    if target not in Madzs:
                                        try:
                                            Bots.remove(target)
-                                           ptatan1983.sendMessage(msg.to,"Berhasil menghapus bot")
+                                           nadya.sendMessage(msg.to,"Berhasil menghapus bot")
                                        except:
                                            pass
 
                         elif cmd == "admin:on" or text.lower() == 'admin:on':
                             if msg._from in admin:
                                 wait["addadmin"] = True
-                                ptatan1983.sendMessage(msg.to,"Send kontaknya")
+                                nadya.sendMessage(msg.to,"Send kontaknya")
 
                         elif cmd == "admin:repeat" or text.lower() == 'admin:repeat':
                             if msg._from in admin:
                                 wait["delladmin"] = True
-                                ptatan1983.sendMessage(msg.to,"Send kontaknya")
+                                nadya.sendMessage(msg.to,"Send kontaknya")
 
                         elif cmd == "staff:on" or text.lower() == 'staff:on':
                             if msg._from in admin:
                                 wait["addstaff"] = True
-                                ptatan1983.sendMessage(msg.to,"Send kontaknya")
+                                nadya.sendMessage(msg.to,"Send kontaknya")
 
                         elif cmd == "staff:repeat" or text.lower() == 'staff:repeat':
                             if msg._from in admin:
                                 wait["dellstaff"] = True
-                                ptatan1983.sendMessage(msg.to,"Send kontaknya")
+                                nadya.sendMessage(msg.to,"Send kontaknya")
 
                         elif cmd == "bot:on" or text.lower() == 'bot:on':
                             if msg._from in admin:
                                 wait["addbots"] = True
-                                ptatan1983.sendMessage(msg.to,"Send kontaknya")
+                                nadya.sendMessage(msg.to,"Send kontaknya")
 
                         elif cmd == "bot:repeat" or text.lower() == 'bot:repeat':
                             if msg._from in admin:
                                 wait["dellbots"] = True
-                                ptatan1983.sendMessage(msg.to,"Send kontaknya")
+                                nadya.sendMessage(msg.to,"Send kontaknya")
 
                         elif cmd == "refresh" or text.lower() == 'refresh':
                             if msg._from in admin:
@@ -4790,125 +4790,125 @@ def bot(op):
                                 wait["dblacklist"] = False
                                 wait["Talkwblacklist"] = False
                                 wait["Talkdblacklist"] = False
-                                ptatan1983.sendMessage(msg.to,"Refresh Done!")
+                                nadya.sendMessage(msg.to,"Refresh Done!")
 
                         elif cmd == "contact admin" or text.lower() == 'contact admin':
                             if msg._from in admin:
                                 ma = ""
                                 for i in admin:
-                                    ma = ptatan1983.getContact(i)
-                                    ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
+                                    ma = nadya.getContact(i)
+                                    nadya.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
                         elif cmd == "contact staff" or text.lower() == 'contact staff':
                             if msg._from in admin:
                                 ma = ""
                                 for i in staff:
-                                    ma = ptatan1983.getContact(i)
-                                    ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
+                                    ma = nadya.getContact(i)
+                                    nadya.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
                         elif cmd == "contact bot" or text.lower() == 'contact bot':
                             if msg._from in admin:
                                 ma = ""
                                 for i in Bots:
-                                    ma = ptatan1983.getContact(i)
-                                    ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
+                                    ma = nadya.getContact(i)
+                                    nadya.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
 #===========COMMAND ON OFF============#
                         elif cmd == "notag on" or text.lower() == 'notag on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["Mentionkick"] = True
-                                ptatan1983.sendMessage(msg.to,"Notag diaktifkan")
+                                nadya.sendMessage(msg.to,"Notag diaktifkan")
 
                         elif cmd == "notag off" or text.lower() == 'notag off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["Mentionkick"] = False
-                                ptatan1983.sendMessage(msg.to,"Notag dinonaktifkan")
+                                nadya.sendMessage(msg.to,"Notag dinonaktifkan")
 
                         elif cmd == "contact on" or text.lower() == 'contact on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["contact"] = True
-                                ptatan1983.sendMessage(msg.to,"Deteksi contact diaktifkan")
+                                nadya.sendMessage(msg.to,"Deteksi contact diaktifkan")
 
                         elif cmd == "contact off" or text.lower() == 'contact off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["contact"] = False
-                                ptatan1983.sendMessage(msg.to,"Deteksi contact dinonaktifkan")
+                                nadya.sendMessage(msg.to,"Deteksi contact dinonaktifkan")
 
                         elif cmd == "respon on" or text.lower() == 'respon on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["detectMention"] = True
-                                ptatan1983.sendMessage(msg.to,"Auto respon diaktifkan")
+                                nadya.sendMessage(msg.to,"Auto respon diaktifkan")
 
                         elif cmd == "respon off" or text.lower() == 'respon off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["detectMention"] = False
-                                ptatan1983.sendMessage(msg.to,"Auto respon dinonaktifkan")                   
+                                nadya.sendMessage(msg.to,"Auto respon dinonaktifkan")                   
 
                         elif cmd == "autojoin on" or text.lower() == 'autojoin on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoJoin"] = True
-                                ptatan1983.sendMessage(msg.to,"Autojoin diaktifkan")
+                                nadya.sendMessage(msg.to,"Autojoin diaktifkan")
 
                         elif cmd == "autojoin off" or text.lower() == 'autojoin off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoJoin"] = False
-                                ptatan1983.sendMessage(msg.to,"Autojoin dinonaktifkan")
+                                nadya.sendMessage(msg.to,"Autojoin dinonaktifkan")
 
                         elif cmd == "autoleave on" or text.lower() == 'autoleave on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoLeave"] = True
-                                ptatan1983.sendMessage(msg.to,"Autoleave diaktifkan")
+                                nadya.sendMessage(msg.to,"Autoleave diaktifkan")
 
                         elif cmd == "autoleave off" or text.lower() == 'autoleave off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoLeave"] = False
-                                ptatan1983.sendMessage(msg.to,"Autoleave dinonaktifkan")
+                                nadya.sendMessage(msg.to,"Autoleave dinonaktifkan")
 
                         elif cmd == "autoadd on" or text.lower() == 'autoadd on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoAdd"] = True
-                                ptatan1983.sendMessage(msg.to,"Auto add diaktifkan")
+                                nadya.sendMessage(msg.to,"Auto add diaktifkan")
 
                         elif cmd == "autoadd off" or text.lower() == 'autoadd off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["autoAdd"] = False
-                                ptatan1983.sendMessage(msg.to,"Auto add dinonaktifkan")
+                                nadya.sendMessage(msg.to,"Auto add dinonaktifkan")
 
                         elif cmd == "sticker on" or text.lower() == 'sticker on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["sticker"] = True
-                                ptatan1983.sendMessage(msg.to,"Deteksi sticker diaktifkan")
+                                nadya.sendMessage(msg.to,"Deteksi sticker diaktifkan")
 
                         elif cmd == "sticker off" or text.lower() == 'sticker off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["sticker"] = False
-                                ptatan1983.sendMessage(msg.to,"Deteksi sticker dinonaktifkan")
+                                nadya.sendMessage(msg.to,"Deteksi sticker dinonaktifkan")
 
                         elif cmd == "jointicket on" or text.lower() == 'jointicket on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["autoJoinTicket"] = True
-                                ptatan1983.sendMessage(msg.to,"Join ticket diaktifkan")
+                                nadya.sendMessage(msg.to,"Join ticket diaktifkan")
 
                         elif cmd == "jointicket off" or text.lower() == 'jointicket off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 settings["autoJoinTicket"] = False
-                                ptatan1983.sendMessage(msg.to,"Join Ticket dinonaktifkan")
+                                nadya.sendMessage(msg.to,"Join Ticket dinonaktifkan")
 
 #===========COMMAND BLACKLIST============#
                         elif ("Ban " in msg.text):
@@ -4922,7 +4922,7 @@ def bot(op):
                                for target in targets:
                                        try:
                                            wait["blacklist"][target] = True
-                                           ptatan1983.sendMessage(msg.to,"Berhasil menambahkan blacklist")
+                                           nadya.sendMessage(msg.to,"Berhasil menambahkan blacklist")
                                        except:
                                            pass
 
@@ -4937,7 +4937,7 @@ def bot(op):
                                for target in targets:
                                        try:
                                            del wait["blacklist"][target]
-                                           ptatan1983.sendMessage(msg.to,"Berhasil menghapus blacklist")
+                                           nadya.sendMessage(msg.to,"Berhasil menghapus blacklist")
                                        except:
                                            pass
 
@@ -4945,94 +4945,94 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["wblacklist"] = True
-                                ptatan1983.sendMessage(msg.to,"Send kontaknya")
+                                nadya.sendMessage(msg.to,"Send kontaknya")
 
                         elif cmd == "unban:on" or text.lower() == 'unban:on':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 wait["dblacklist"] = True
-                                ptatan1983.sendMessage(msg.to,"Send kontaknya")
+                                nadya.sendMessage(msg.to,"Send kontaknya")
 
                         elif cmd == "banlist" or text.lower() == 'banlist':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               if wait["blacklist"] == {}:
-                                ptatan1983.sendMessage(msg.to,"Tidak ada blacklist")
+                                nadya.sendMessage(msg.to,"Tidak ada blacklist")
                               else:
                                 ma = ""
                                 a = 0
                                 for m_id in wait["blacklist"]:
                                     a = a + 1
                                     end = '\n'
-                                    ma += str(a) + ". " +ptatan1983.getContact(m_id).displayName + "\n"
-                                ptatan1983.sendMessage(msg.to,"»» Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(wait["blacklist"]))))
+                                    ma += str(a) + ". " +nadya.getContact(m_id).displayName + "\n"
+                                nadya.sendMessage(msg.to,"»» Blacklist User\n\n"+ma+"\nTotal「%s」Blacklist User" %(str(len(wait["blacklist"]))))
 
                         elif cmd == "blc" or text.lower() == 'blc':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               if wait["blacklist"] == {}:
-                                    ptatan1983.sendMessage(msg.to,"Tidak ada blacklist")
+                                    nadya.sendMessage(msg.to,"Tidak ada blacklist")
                               else:
                                     ma = ""
                                     for i in wait["blacklist"]:
-                                        ma = ptatan1983.getContact(i)
-                                        ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
+                                        ma = nadya.getContact(i)
+                                        nadya.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
                         elif cmd == "clearban" or text.lower() == 'clearban':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                               wait["blacklist"] = {}
-                              ragets = aditmadzs.getContacts(wait["blacklist"])
+                              ragets = nadya.getContacts(wait["blacklist"])
                               mc = "[%i]User Blacklist" % len(ragets)
-                              ptatan1983.sendMessage(msg.to,"Kalian di maafkan " +mc)
+                              nadya.sendMessage(msg.to,"Kalian di maafkan " +mc)
 #===========COMMAND SET============#
                         elif 'Set pesan: ' in msg.text:
                            if msg._from in admin:
                               spl = msg.text.replace('Set pesan: ','')
                               if spl in [""," ","\n",None]:
-                                  ptatan1983.sendMessage(msg.to, "Gagal mengganti Pesan Msg")
+                                  nadya.sendMessage(msg.to, "Gagal mengganti Pesan Msg")
                               else:
                                   wait["message"] = spl
-                                  ptatan1983.sendMessage(msg.to, "「Pesan Msg」\nPesan Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  nadya.sendMessage(msg.to, "「Pesan Msg」\nPesan Msg diganti jadi :\n\n「{}」".format(str(spl)))
                                   
                         elif 'Set leave: ' in msg.text:
                            if msg._from in admin:
                               spl = msg.text.replace('Set leave: ','')
                               if spl in [""," ","\n",None]:
-                                  ptatan1983.sendMessage(msg.to, "Gagal mengganti Leave Msg")
+                                  nadya.sendMessage(msg.to, "Gagal mengganti Leave Msg")
                               else:
                                   wait["leave"] = spl
-                                  ptatan1983.sendMessage(msg.to, "「Leave Msg」\nLeave Msg diganti jadi :\n\n「{}」".format(str(spl)))                                    
+                                  nadya.sendMessage(msg.to, "「Leave Msg」\nLeave Msg diganti jadi :\n\n「{}」".format(str(spl)))                                    
 
                         elif 'Set respon: ' in msg.text:
                            if msg._from in admin:
                               spl = msg.text.replace('Set respon: ','')
                               if spl in [""," ","\n",None]:
-                                  ptatan1983.sendMessage(msg.to, "Gagal mengganti Respon Msg")
+                                  nadya.sendMessage(msg.to, "Gagal mengganti Respon Msg")
                               else:
                                   wait["Respontag"] = spl
-                                  ptatan1983.sendMessage(msg.to, "「Respon Msg」\nRespon Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  nadya.sendMessage(msg.to, "「Respon Msg」\nRespon Msg diganti jadi :\n\n「{}」".format(str(spl)))
 
                         elif 'Set spam: ' in msg.text:
                            if msg._from in admin:
                               spl = msg.text.replace('Set spam: ','')
                               if spl in [""," ","\n",None]:
-                                  ptatan1983.sendMessage(msg.to, "Gagal mengganti Spam")
+                                  nadya.sendMessage(msg.to, "Gagal mengganti Spam")
                               else:
-                                  Setmain["ptatan1983message"] = spl
-                                  ptatan1983.sendMessage(msg.to, "「Spam Msg」\nSpam Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  Setmain["nadyamessage"] = spl
+                                  nadya.sendMessage(msg.to, "「Spam Msg」\nSpam Msg diganti jadi :\n\n「{}」".format(str(spl)))
 
                         elif text.lower() == "cek pesan":
                             if msg._from in admin:
-                               ptatan1983.sendMessage(msg.to, "「Pesan Msg」\nPesan Msg mu :\n\n「 " + str(wait["message"]) + " 」")
+                               nadya.sendMessage(msg.to, "「Pesan Msg」\nPesan Msg mu :\n\n「 " + str(wait["message"]) + " 」")
 
                         elif text.lower() == "cek respon":
                             if msg._from in admin:
-                               ptatan1983.sendMessage(msg.to, "「Respon Msg」\nRespon Msg mu :\n\n「 " + str(wait["Respontag"]) + " 」")
+                               nadya.sendMessage(msg.to, "「Respon Msg」\nRespon Msg mu :\n\n「 " + str(wait["Respontag"]) + " 」")
 
                         elif text.lower() == "cek spam":
                             if msg._from in admin:
-                               ptatan1983.sendMessage(msg.to, "「Spam Msg」\nSpam Msg mu :\n\n「 " + str(Setmain["ADITMADZSmessage"]) + " 」")
+                               nadya.sendMessage(msg.to, "「Spam Msg」\nSpam Msg mu :\n\n「 " + str(Setmain["ADITMADZSmessage"]) + " 」")
 
 #===========JOIN TICKET============#
                         elif "/ti/g/" in msg.text.lower():
@@ -5045,9 +5045,9 @@ def bot(op):
                                      if l not in n_links:
                                         n_links.append(l)
                                  for ticket_id in n_links:
-                                     group = ptatan1983.findGroupByTicket(ticket_id)
-                                     ptatan1983.acceptGroupInvitationByTicket(group.id,ticket_id)
-                                     ptatan1983.sendMessage(msg.to, "BY:TANBOTMEVERDIE✯͜͡❂➣ JOIN GROUP : %s" % str(group.name))
+                                     group = nadya.findGroupByTicket(ticket_id)
+                                     nadya.acceptGroupInvitationByTicket(group.id,ticket_id)
+                                     nadya.sendMessage(msg.to, "BY:TANBOTMEVERDIE✯͜͡❂➣ JOIN GROUP : %s" % str(group.name))
                                      group1 = ki.findGroupByTicket(ticket_id)
                                      ki.acceptGroupInvitationByTicket(group1.id,ticket_id)
                                      ki.sendMessage(msg.to, "BY:TANBOTMEVERDIE✯͜͡❂➣ JOIN GROUP : %s" % str(group.name))
