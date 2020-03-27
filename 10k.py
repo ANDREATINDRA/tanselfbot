@@ -3337,11 +3337,11 @@ def bot(op):
                           if msg._from in admin:
                             separate = text.split(" ")
                             number = text.replace(separate[0] + " ","")
-                            groups = ptatan1983.getGroupIdsJoined()
+                            groups = nadya.getGroupIdsJoined()
                             ret_ = ""
                             try:
                                 group = groups[int(number)-1]
-                                G = ptatan1983.getGroup(group)
+                                G = nadya.getGroup(group)
                                 try:
                                     gCreator = G.creator.displayName
                                 except:
@@ -3368,7 +3368,7 @@ def bot(op):
                                 ret_ += "\n┃┃ Group Qr : {}".format(gQr)
                                 ret_ += "\n┃┃ Group Ticket : {}".format(gTicket)
                                 ret_ += ""
-                                ptatan1983.sendMessage(to, str(ret_))
+                                nadya.sendMessage(to, str(ret_))
                             except:
                                 pass
 
@@ -3377,13 +3377,13 @@ def bot(op):
                             if msg._from in admin:
                                ma = ""
                                a = 0
-                               gid = ptatan1983.getGroupIdsJoined()
+                               gid = nadya.getGroupIdsJoined()
                                for i in gid:
-                                   G = ptatan1983.getGroup(i)
+                                   G = nadya.getGroup(i)
                                    a = a + 1
                                    end = "\n"
                                    ma += "┃☬ " + str(a) + ". " +G.name+ "\n"
-                               ptatan1983.sendMessage(msg.to,"╭════════[ GROUP LIST ]\n┃☬\n"+ma+"┃☬\n  ╰═══════[ Total「"+str(len(gid))+"」Groups ]")
+                               nadya.sendMessage(msg.to,"╭════════[ GROUP LIST ]\n┃☬\n"+ma+"┃☬\n  ╰═══════[ Total「"+str(len(gid))+"」Groups ]")
 
                         elif cmd == "gruplist1":
                             if msg._from in admin:
@@ -3425,85 +3425,85 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 if msg.toType == 2:
-                                   X = ptatan1983.getGroup(msg.to)
+                                   X = nadya.getGroup(msg.to)
                                    X.preventedJoinByTicket = False
-                                   ptatan1983.updateGroup(X)
-                                   ptatan1983.sendMessage(msg.to, "QR telah dibuka")
+                                   nadya.updateGroup(X)
+                                   nadya.sendMessage(msg.to, "QR telah dibuka")
 
                         elif cmd == "close":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 if msg.toType == 2:
-                                   X = ptatan1983.getGroup(msg.to)
+                                   X = nadya.getGroup(msg.to)
                                    X.preventedJoinByTicket = True
-                                   ptatan1983.updateGroup(X)
-                                   ptatan1983.sendMessage(msg.to, "QR telah ditutup")
+                                   nadya.updateGroup(X)
+                                   nadya.sendMessage(msg.to, "QR telah ditutup")
 
                         elif cmd == "url grup":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 if msg.toType == 2:
-                                   x = ptatan1983.getGroup(msg.to)
+                                   x = nadya.getGroup(msg.to)
                                    if x.preventedJoinByTicket == True:
                                       x.preventedJoinByTicket = False
-                                      ptatan1983.updateGroup(x)
+                                   nadya.updateGroup(x)
                                    gurl = ptatan1983.reissueGroupTicket(msg.to)
-                                   ptatan1983.sendMessage(msg.to, "Nama : "+str(x.name)+ "\nUrl grup : http://line.me/R/ti/g/"+gurl)
+                                   nadya.sendMessage(msg.to, "Nama : "+str(x.name)+ "\nUrl grup : http://line.me/R/ti/g/"+gurl)
 
 #===========BOT UPDATE============#
                         elif cmd == "uppro":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][mid] = True
-                                ptatan1983.sendMessage(msg.to,"Kirim fotonya.....")
+                                Setmain["nadyafoto"][mid] = True
+                                nadya.sendMessage(msg.to,"Kirim fotonya.....")
  
                         elif cmd == "b1up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Amid] = True
+                                Setmain["nadyafoto"][Amid] = True
                                 ki.sendMessage(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "b2up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Bmid] = True
+                                Setmain["nadyafoto"][Bmid] = True
                                 kk.sendMessage(msg.to,"Kirim fotonya.....")
                                 
                         elif cmd == "b3up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Cmid] = True
+                                Setmain["nadyafoto"][Cmid] = True
                                 kc.sendMessage(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "b4up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Dmid] = True
+                                Setmain["nadyafoto"][Dmid] = True
                                 kb.sendMessage(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "b5up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Emid] = True
+                                Setmain["nadyafoto"][Emid] = True
                                 kd.sendMessage(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "b6up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Fmid] = True
+                                Setmain["nadyafoto"][Fmid] = True
                                 ke.sendMessage(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "b7up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Gmid] = True
+                                Setmain["nadyafoto"][Gmid] = True
                                 kf.sendMessage(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "b8up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Hmid] = True
+                                Setmain["nadyafoto"][Hmid] = True
                                 kg.sendMessage(msg.to,"Kirim fotonya.....")
                         elif cmd == "b9up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Imid] = True
+                                Setmain["nadyafoto"][Imid] = True
                                 kh.sendMessage(msg.to,"Kirim fotonya.....")
 
                         elif cmd == "b10up":
                             if msg._from in admin:
-                                Setmain["ptatan1983foto"][Zmid] = True
+                                Setmain["nadyafoto"][Zmid] = True
                                 sw.sendMessage(msg.to,"Kirim fotonya.....")
                         
                         elif cmd.startswith("myname: "):
@@ -3511,10 +3511,10 @@ def bot(op):
                             separate = msg.text.split(" ")
                             string = msg.text.replace(separate[0] + " ","")
                             if len(string) <= 10000000000:
-                                profile = ptatan1983.getProfile()
+                                profile = nadya.getProfile()
                                 profile.displayName = string
-                                ptatan1983.updateProfile(profile)
-                                ptatan1983.sendMessage(msg.to,"Nama diganti jadi " + string + "")
+                                nadya.updateProfile(profile)
+                                nadya.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
                         elif cmd.startswith("b1name: "):
                           if msg._from in admin:
@@ -3619,18 +3619,18 @@ def bot(op):
                         elif cmd == "ลบรัน":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                              ginvited = ptatan1983.getGroupIdsInvited()
+                              ginvited = nadya.getGroupIdsInvited()
                               if ginvited != [] and ginvited != None:
                                   for gid in ginvited:
-                                      ptatan1983.rejectGroupInvitation(gid)
-                                  ptatan1983.sendMessage(to, "Berhasil tolak sebanyak {} undangan grup".format(str(len(ginvited))))
+                                      nadya.rejectGroupInvitation(gid)
+                                  nadya.sendMessage(to, "Berhasil tolak sebanyak {} undangan grup".format(str(len(ginvited))))
                               else:
-                                  ptatan1983.sendMessage(to, "Tidak ada undangan yang tertunda")
+                                  nadya.sendMessage(to, "Tidak ada undangan yang tertunda")
 
 #===========BOT UPDATE============#
                         elif cmd == "tagall" or text.lower() == 'hai':
                           if wait["selfbot"] == True:
-                               group = ptatan1983.getGroup(msg.to)
+                               group = nadya.getGroup(msg.to)
                                nama = [contact.mid for contact in group.members]
                                nm1, nm2, nm3, nm4, jml = [], [], [], [], len(nama)
                                if jml <= 20:
@@ -3684,7 +3684,7 @@ def bot(op):
 
                         elif cmd == "tag":
                           if wait["selfbot"] == True:
-                            group = ptatan1983.getGroup(msg.to)
+                            group = nadya.getGroup(msg.to)
                             nama = [contact.mid for contact in group.members]
                             k = len(nama)//20
                             for a in range(k+1):
@@ -3695,8 +3695,8 @@ def bot(op):
                                     b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                     s += 7
                                     txt += u'@Alin \n'
-                                ptatan1983.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
-                                ptatan1983.sendMessage(to, "Hello {} Mention".format(str(len(nama)))) 
+                                nadya.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
+                                nadya.sendMessage(to, "Hello {} Mention".format(str(len(nama)))) 
 
                         elif cmd == "listbot":
                           if wait["selfbot"] == True:
@@ -3706,8 +3706,8 @@ def bot(op):
                                 for m_id in Bots:
                                     a = a + 1
                                     end = '\n'
-                                    ma += str(a) + ". " +ptatan1983.getContact(m_id).displayName + "\n"
-                                ptatan1983.sendMessage(msg.to,"┏━━[ BOT ]\n\n"+ma+"\nTotal「%s」BOT" %(str(len(Bots))))
+                                    ma += str(a) + ". " +nadya.getContact(m_id).displayName + "\n"
+                               nadya.sendMessage(msg.to,"┏━━[ BOT ]\n\n"+ma+"\nTotal「%s」BOT" %(str(len(Bots))))
 
                         elif cmd == "listadmin":
                           if wait["selfbot"] == True:
@@ -3721,16 +3721,16 @@ def bot(op):
                                 for m_id in owner:
                                     a = a + 1
                                     end = '\n'
-                                    ma += str(a) + ". " +ptatan1983.getContact(m_id).displayName + "\n"
+                                    ma += str(a) + ". " +nadya.getContact(m_id).displayName + "\n"
                                 for m_id in admin:
                                     b = b + 1
                                     end = '\n'
-                                    mb += str(b) + ". " +ptatan1983.getContact(m_id).displayName + "\n"
+                                    mb += str(b) + ". " +nadya.getContact(m_id).displayName + "\n"
                                 for m_id in staff:
                                     c = c + 1
                                     end = '\n'
-                                    mc += str(c) + ". " +ptatan1983.getContact(m_id).displayName + "\n"
-                                ptatan1983.sendMessage(msg.to,"┏━━[ BOT admin ]\n\nSuper admin:\n"+ma+"\nAdmin:\n"+mb+"\nStaff:\n"+mc+"\nTotal「%s」" %(str(len(owner)+len(admin)+len(staff))))
+                                    mc += str(c) + ". " +nadya.getContact(m_id).displayName + "\n"
+                                nadya.sendMessage(msg.to,"┏━━[ BOT admin ]\n\nSuper admin:\n"+ma+"\nAdmin:\n"+mb+"\nStaff:\n"+mc+"\nTotal「%s」" %(str(len(owner)+len(admin)+len(staff))))
 
                         elif cmd == "listprotect":
                           if wait["selfbot"] == True:
@@ -3749,28 +3749,28 @@ def bot(op):
                                 for group in gid:
                                     a = a + 1
                                     end = '\n'
-                                    ma += str(a) + ". " +ptatan1983.getGroup(group).name + "\n"
+                                    ma += str(a) + ". " +nadya.getGroup(group).name + "\n"
                                 gid = protectkick
                                 for group in gid:
                                     b = b + 1
                                     end = '\n'
-                                    mb += str(b) + ". " +ptatan1983.getGroup(group).name + "\n"
+                                    mb += str(b) + ". " +nadya.getGroup(group).name + "\n"
                                 gid = protectjoin
                                 for group in gid:
                                     d = d + 1
                                     end = '\n'
-                                    md += str(d) + ". " +ptatan1983.getGroup(group).name + "\n"
+                                    md += str(d) + ". " +nadya.getGroup(group).name + "\n"
                                 gid = protectcancel
                                 for group in gid:
                                     c = c + 1
                                     end = '\n'
-                                    mc += str(c) + ". " +ptatan1983.getGroup(group).name + "\n"
+                                    mc += str(c) + ". " +nadya.getGroup(group).name + "\n"
                                 gid = protectinvite
                                 for group in gid:
                                     e = e + 1
                                     end = '\n'
-                                    me += str(e) + ". " +ptatan1983.getGroup(group).name + "\n"                                    
-                                ptatan1983.sendMessage(msg.to,"┏━━[ MAX Protect ]\n\n»» PROTECT URL :\n"+ma+"\n»» PROTECT KICK :\n"+mb+"\n»» PROTECT JOIN :\n"+md+"\n»» PROTECT CANCEL:\n"+mc+"\n»» PROTECT INVITE :\n"+me+"\nTotal「%s」Protect yang aktif" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel)+len(protectinvite))))
+                                    me += str(e) + ". " +nadya.getGroup(group).name + "\n"                                    
+                                nadya.sendMessage(msg.to,"┏━━[ MAX Protect ]\n\n»» PROTECT URL :\n"+ma+"\n»» PROTECT KICK :\n"+mb+"\n»» PROTECT JOIN :\n"+md+"\n»» PROTECT CANCEL:\n"+mc+"\n»» PROTECT INVITE :\n"+me+"\nTotal「%s」Protect yang aktif" %(str(len(protectqr)+len(protectkick)+len(protectjoin)+len(protectcancel)+len(protectinvite))))
 
                         elif cmd == "respon":
                           if wait["selfbot"] == True:
@@ -3791,7 +3791,7 @@ def bot(op):
                             if msg._from in admin:
                                 try:
                                     anggota = [Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid]
-                                    ptatan1983.inviteIntoGroup(msg.to, anggota)
+                                    nadya.inviteIntoGroup(msg.to, anggota)
                                     ki.acceptGroupInvitation(msg.to)
                                     kk.acceptGroupInvitation(msg.to)
                                     kc.acceptGroupInvitation(msg.to)
@@ -3808,17 +3808,17 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 try:
-                                    ginfo = ptatan1983.getGroup(msg.to)
-                                    ptatan1983.inviteIntoGroup(msg.to, [Zmid])
-                                    ptatan1983.sendMessage(msg.to,"Grup 「"+str(ginfo.name)+"」 Amax Dari JS")
+                                    ginfo = nadya.getGroup(msg.to)
+                                    nadya.inviteIntoGroup(msg.to, [Zmid])
+                                    nadya.sendMessage(msg.to,"Grup 「"+str(ginfo.name)+"」 Amax Dari JS")
                                 except:
                                     pass
 
                         elif cmd == "reinvite":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
                                 ki.updateGroup(G)
                                 G.preventedJoinByTicket = True
@@ -3859,12 +3859,12 @@ def bot(op):
                         elif cmd == "join all":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 ki.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 kk.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 kc.acceptGroupInvitationByTicket(msg.to,Ticket)
@@ -3881,7 +3881,7 @@ def bot(op):
                         elif cmd == "bye all":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 ki.sendMessage(msg.to, "dadah group "+str(G.name))
                                 ki.leaveGroup(msg.to)
                                 kk.leaveGroup(msg.to)
@@ -3895,12 +3895,12 @@ def bot(op):
 
                         elif cmd == "bot1":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 ki.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = ki.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -3908,12 +3908,12 @@ def bot(op):
 
                         elif cmd == "bot2":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 kk.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kk.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -3921,12 +3921,12 @@ def bot(op):
 
                         elif cmd == "bot3":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 kc.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kc.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -3934,12 +3934,12 @@ def bot(op):
 
                         elif cmd == "bot4":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 kb.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kb.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -3947,12 +3947,12 @@ def bot(op):
 
                         elif cmd == "bot5":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 kd.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kd.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -3960,12 +3960,12 @@ def bot(op):
 
                         elif cmd == "bot6":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 ke.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = ke.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -3973,12 +3973,12 @@ def bot(op):
 
                         elif cmd == "bot7":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 kf.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kf.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -3986,12 +3986,12 @@ def bot(op):
 
                         elif cmd == "bot8":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 kg.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kg.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -3999,12 +3999,12 @@ def bot(op):
 
                         elif cmd == "bot9":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 kh.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = kh.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -4013,12 +4013,12 @@ def bot(op):
                         
                         elif cmd == "kicker join":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ginfo = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                ginfo = nadya.getGroup(msg.to)
                                 G.preventedJoinByTicket = False
-                                ptatan1983.updateGroup(G)
+                                nadya.updateGroup(G)
                                 invsend = 0
-                                Ticket = ptatan1983.reissueGroupTicket(msg.to)
+                                Ticket = nadya.reissueGroupTicket(msg.to)
                                 sw.acceptGroupInvitationByTicket(msg.to,Ticket)
                                 G = sw.getGroup(msg.to)
                                 G.preventedJoinByTicket = True
@@ -4026,78 +4026,78 @@ def bot(op):
 
                         elif cmd == "kicker bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 sw.sendText(msg.to, "Bye fams "+str(G.name))
                                 sw.leaveGroup(msg.to)
 
                         elif cmd == "b1bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 ki.sendText(msg.to, "Bye fams "+str(G.name))
                                 ki.leaveGroup(msg.to)
 
                         elif cmd == "b2bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 kk.sendText(msg.to, "Bye fams "+str(G.name))
                                 kk.leaveGroup(msg.to)
 
                         elif cmd == "b3bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 kc.sendText(msg.to, "Bye fams "+str(G.name))
                                 kc.leaveGroup(msg.to)
 
                         elif cmd == "b4bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 kb.sendText(msg.to, "Bye fams "+str(G.name))
                                 kb.leaveGroup(msg.to)
 
                         elif cmd == "b5bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 kd.sendText(msg.to, "Bye fams "+str(G.name))
                                 kd.leaveGroup(msg.to)
 
                         elif cmd == "b6bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 ke.sendText(msg.to, "Bye fams "+str(G.name))
                                 ke.leaveGroup(msg.to)
 
                         elif cmd == "b7bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 kf.sendText(msg.to, "Bye fams "+str(G.name))
                                 kf.leaveGroup(msg.to)
 
                         elif cmd == "b8bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 kg.sendText(msg.to, "Bye fams "+str(G.name))
                                 kg.leaveGroup(msg.to)
 
                         elif cmd == "b9bye":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 kh.sendText(msg.to, "Bye fams "+str(G.name))
                                 kh.leaveGroup(msg.to)
 
                         elif cmd == "bye me":
                             if msg._from in admin:
-                                G = ptatan1983.getGroup(msg.to)
-                                ptatan1983.sendText(msg.to, "Bye fams "+str(G.name))
-                                ptatan1983.leaveGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
+                                nadya.sendText(msg.to, "Bye fams "+str(G.name))
+                                nadya.leaveGroup(msg.to)
 
                         elif cmd == "สปีด" or cmd == "สปีท":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 get_profile_time_start = time.time()
-                                get_profile = aditmadzs.getProfile()
+                                get_profile = nadya.getProfile()
                                 get_profile_time = time.time() - get_profile_time_start
-                                ptatan1983.sendMessage(msg.to, "Waiting...")
-                                ptatan1983.sendMessage(msg.to, "%.10f detik" % (get_profile_time/3))
+                                nadya.sendMessage(msg.to, "Waiting...")
+                                nadya.sendMessage(msg.to, "%.10f detik" % (get_profile_time/3))
                         
                         elif cmd == "spb":
                           if wait["selfbot"] == True:
@@ -4143,9 +4143,9 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
-                               ptatan1983.sendMessage(msg.to, "Progres speed...")
+                               nadya.sendMessage(msg.to, "Progres speed...")
                                elapsed_time = time.time() - start
-                               ptatan1983.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
+                               nadya.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
  
                         elif cmd == "speedbot" or cmd == "spbot":
                           if wait["selfbot"] == True:
@@ -4175,23 +4175,23 @@ def bot(op):
                           if wait["selfbot"] == True:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
-                                 Setmain['ptatan1083readPoint'][msg.to] = msg_id
-                                 Setmain['ptatan1983readMember'][msg.to] = {}
-                                 ptatan1983.sendMessage(msg.to, "Lurking berhasil diaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                 Setmain['nadyareadPoint'][msg.to] = msg_id
+                                 Setmain['nadyareadMember'][msg.to] = {}
+                                 nadya.sendMessage(msg.to, "Lurking berhasil diaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
                             
                         elif cmd == "cctv off":
                           if wait["selfbot"] == True:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
-                                 del Setmain['ptatan1983readPoint'][msg.to]
-                                 del Setmain['ptatan1983readMember'][msg.to]
-                                 ptatan1983.sendMessage(msg.to, "CCTV berhasil dinoaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                 del Setmain['nadyareadPoint'][msg.to]
+                                 del Setmain['nadyareadMember'][msg.to]
+                                 nadya.sendMessage(msg.to, "CCTV berhasil dinoaktifkan\n\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
                             
                         elif cmd == "cyduk":
-                            if msg.to in Setmain['ptatan1983readPoint']:
-                                if Setmain['ptatan1983readMember'][msg.to] != {}:
+                            if msg.to in Setmain['nadyareadPoint']:
+                                if Setmain['nadyareadMember'][msg.to] != {}:
                                     aa = []
-                                    for x in Setmain['ptatan1983readMember'][msg.to]:
+                                    for x in Setmain['nadyareadMember'][msg.to]:
                                         aa.append(x)
                                     try:
                                         arrData = ""
@@ -4215,27 +4215,27 @@ def bot(op):
                                                 textx += str(b) + ". "
                                             else:
                                                 try:
-                                                    no = "[ {} ]".format(str(aditmadzs.getGroup(msg.to).name))
+                                                    no = "[ {} ]".format(str(nadya.getGroup(msg.to).name))
                                                 except:
                                                     no = "  "
                                         msg.to = msg.to
                                         msg.text = textx+"\nTanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\nJam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]"
                                         msg.contentMetadata = {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}
                                         msg.contentType = 0
-                                        ptatan1983.sendMessage1(msg)
+                                        nadya.sendMessage1(msg)
                                     except:
                                         pass
                                     try:
-                                        del Setmain['ptatan1983readPoint'][msg.to]
-                                        del Setmain['ptatan1983readMember'][msg.to]
+                                        del Setmain['nadyareadPoint'][msg.to]
+                                        del Setmain['nadyareadMember'][msg.to]
                                     except:
                                         pass
-                                    Setmain['ptatan1983readPoint'][msg.to] = msg.id
-                                    Setmain['ptatan1983readMember'][msg.to] = {}
+                                    Setmain['nadyareadPoint'][msg.to] = msg.id
+                                    Setmain['nadyareadMember'][msg.to] = {}
                                 else:
-                                    ptatan1983.sendMessage(msg.to, "User kosong...")
+                                    nadya.sendMessage(msg.to, "User kosong...")
                             else:
-                                ptatan1983.sendMessage(msg.to, "Ketik cctv on dulu")
+                                nadya.sendMessage(msg.to, "Ketik cctv on dulu")
 
                         elif cmd.startswith("spamtag: "):
                           if wait["selfbot"] == True:
@@ -4243,8 +4243,8 @@ def bot(op):
                                 proses = text.split(":")
                                 strnum = text.replace(proses[0] + ":","")
                                 num =  int(strnum)
-                                Setmain["ptatan1983limit"] = num
-                                ptatan1983.sendMessage(msg.to,"Total Spamtag Diubah Menjadi " +strnum)
+                                Setmain["nadyalimit"] = num
+                                nadya.sendMessage(msg.to,"Total Spamtag Diubah Menjadi " +strnum)
 
                         elif cmd.startswith("spamcall: "):
                           if wait["selfbot"] == True:
@@ -4253,7 +4253,7 @@ def bot(op):
                                 strnum = text.replace(proses[0] + ":","")
                                 num =  int(strnum)
                                 wait["limit"] = num
-                                ptatan1983.sendMessage(msg.to,"Total Spamcall Diubah Menjadi " +strnum)
+                                nadya.sendMessage(msg.to,"Total Spamcall Diubah Menjadi " +strnum)
 
                         elif cmd.startswith("spamtag "):
                           if wait["selfbot"] == True:
@@ -4278,11 +4278,11 @@ def bot(op):
                                     if jmlh <= 1000000:
                                         for x in range(jmlh):
                                             try:
-                                                ptatan1983.sendMessage1(msg)
+                                                nadya.sendMessage1(msg)
                                             except Exception as e:
-                                                ptatan1983.sendMessage(msg.to,str(e))
+                                                nadya.sendMessage(msg.to,str(e))
                                     else:
-                                        ptatan1983.sendMessage(msg.to,"KEBANYAKAN GOBLOK!")
+                                        nadya.sendMessage(msg.to,"KEBANYAKAN GOBLOK!")
                                         
                         elif cmd == "spamcall":
                           if wait["selfbot"] == True:
