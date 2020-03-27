@@ -3104,69 +3104,69 @@ def bot(op):
                             if msg._from in admin:
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': msg._from}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
 
                         elif text.lower() == "mid":
-                               ptatan1983.sendMessage(msg.to, msg._from)
+                               nadya.sendMessage(msg.to, msg._from)
 
                         elif ("Mid " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
-                               mi = ptatan1983.getContact(key1)
-                               ptatan1983.sendMessage(msg.to, "Nama : "+str(mi.displayName)+"\nMID : " +key1)
-                               ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
+                               mi = nadya.getContact(key1)
+                               nadya.sendMessage(msg.to, "Nama : "+str(mi.displayName)+"\nMID : " +key1)
+                               nadya.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
 
                         elif ("Info " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
-                               mi = ptatan1983.getContact(key1)
-                               ptatan1983.sendMessage(msg.to, "💀 Nama : "+str(mi.displayName)+"\n💀 Mid : " +key1+"\n💀 Status Message"+str(mi.statusMessage))
-                               ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
-                               if "videoProfile='{" in str(ptatan1983.getContact(key1)):
-                                   ptatan1983.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
+                               mi = nadya.getContact(key1)
+                               nadya.sendMessage(msg.to, "💀 Nama : "+str(mi.displayName)+"\n💀 Mid : " +key1+"\n💀 Status Message"+str(mi.statusMessage))
+                               nadya.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
+                               if "videoProfile='{" in str(nadya.getContact(key1)):
+                                   nadya.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
                                else:
-                                   ptatan1983.sendImageWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath))
+                                   nadya.sendImageWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath))
 
                         elif cmd == "mybot":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': mid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Amid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Bmid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Cmid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Dmid}
                                msg.contentType = 13
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentMetadata = {'mid': Emid}
                                msg.contentType = 13
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentMetadata = {'mid': Fmid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Gmid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Hmid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Imid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': Zmid}
-                               ptatan1983.sendMessage1(msg)
+                               nadya.sendMessage1(msg)
 
                         elif text.lower() == "remove chat":
                           if wait["selfbot"] == True:
@@ -3190,7 +3190,7 @@ def bot(op):
                                    kg.sendMessage(msg.to, "ลบแชท เรียบร้อย ✔")
                                    kh.removeAllMessages(op.param2)
                                    kh.sendMessage(msg.to, "ลบแชท เรียบร้อย ✔")
-                                   ptatan1983.sendMessage(msg.to,"ลบแชทคิกเรียบร้อย ✔")
+                                   nadya.sendMessage(msg.to,"ลบแชทคิกเรียบร้อย ✔")
                                except:
                                    pass
 
@@ -3205,8 +3205,8 @@ def bot(op):
                                       if mention["M"] not in lists:
                                           lists.append(mention["M"])
                                   for ls in lists:
-                                      contact = ptatan1983.getContact(ls)
-                                      ptatan1983.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
+                                      contact = nadya.getContact(ls)
+                                      nadya.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
                             
                         elif cmd.startswith("stealbio "):
                             if msg._from in admin:
@@ -3219,8 +3219,8 @@ def bot(op):
                                       if mention["M"] not in lists:
                                           lists.append(mention["M"])
                                   for ls in lists:
-                                      contact = ptatan1983.getContact(ls)
-                                      ptatan1983.sendMessage(msg.to, "[ Status Message ]\n{}" + contact.statusMessage)
+                                      contact = nadya.getContact(ls)
+                                      nadya.sendMessage(msg.to, "[ Status Message ]\n{}" + contact.statusMessage)
                             
                         elif cmd.startswith("stealpicture "):
                             if msg._from in admin:
@@ -3234,7 +3234,7 @@ def bot(op):
                                             lists.append(mention["M"])
                                     for ls in lists:
                                         path = "http://dl.profile.line-cdn.net/" + ptatan1983.getContact(ls).pictureStatus
-                                        ptatan1983.sendImageWithURL(msg.to, str(path))
+                                        nadya.sendImageWithURL(msg.to, str(path))
                             
                         elif cmd.startswith("stealcover "):
                             if msg._from in admin:
@@ -3248,8 +3248,8 @@ def bot(op):
                                             if mention["M"] not in lists:
                                                 lists.append(mention["M"])
                                         for ls in lists:
-                                            path = ptatan1983.getProfileCoverURL(ls)
-                                            ptatan1983.sendImageWithURL(msg.to, str(path))
+                                            path = nadya.getProfileCoverURL(ls)
+                                            nadya.sendImageWithURL(msg.to, str(path))
 
                         elif cmd.startswith("stealvideoprofile "):
                             if msg._from in admin:
@@ -3260,9 +3260,9 @@ def bot(op):
                                         targets.append(x["M"])
                                     for target in targets:
                                         try:
-                                            contact = ptatan1983.getContact(target)
+                                            contact = nadya.getContact(target)
                                             path = "http://dl.profile.line.naver.jp"+contact.picturePath+"/vp"
-                                            ptatan1983.sendVideoWithURL(msg.to, path)
+                                            nadya.sendVideoWithURL(msg.to, path)
                                         except Exception as e:
                                             pass                                            
 
@@ -3271,14 +3271,14 @@ def bot(op):
                             if msg._from in admin:
                                sep = text.split(" ")
                                pesan = text.replace(sep[0] + " ","")
-                               saya = ptatan1983.getGroupIdsJoined()
+                               saya = nadya.getGroupIdsJoined()
                                for group in saya:
-                                   ptatan1983.sendMessage(group,"[ Broadcast ]\n" + str(pesan))
+                                   nadya.sendMessage(group,"[ Broadcast ]\n" + str(pesan))
 
                         elif text.lower() == "mykey":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               ptatan1983.sendMessage(msg.to, "「Mykey」\nSetkey bot mu「 " + str(Setmain["keyCommand"]) + " 」")
+                               nadya.sendMessage(msg.to, "「Mykey」\nSetkey bot mu「 " + str(Setmain["keyCommand"]) + " 」")
                                
                         elif cmd.startswith("setkey "):
                           if wait["selfbot"] == True:
@@ -3286,21 +3286,21 @@ def bot(op):
                                sep = text.split(" ")
                                key = text.replace(sep[0] + " ","")
                                if key in [""," ","\n",None]:
-                                   ptatan1983.sendMessage(msg.to, "Gagal mengganti key")
+                                   nadya.sendMessage(msg.to, "Gagal mengganti key")
                                else:
                                    Setmain["keyCommand"] = str(key).lower()
-                                   ptatan1983.sendMessage(msg.to, "「Setkey」\nSetkey diganti jadi「{}」".format(str(key).lower()))
+                                   nadya.sendMessage(msg.to, "「Setkey」\nSetkey diganti jadi「{}」".format(str(key).lower()))
 
                         elif text.lower() == "resetkey":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                Setmain["keyCommand"] = ""
-                               ptatan1983.sendMessage(msg.to, "「Setkey」\nSetkey mu kembali ke awal")
+                               nadya.sendMessage(msg.to, "「Setkey」\nSetkey mu kembali ke awal")
 
                         elif cmd == "restart":
                           if wait["selfbot"] == True:
                             if msg._from in creator:
-                               ptatan1983.sendMessage(msg.to, "Restart Sukses Bos!...")
+                               nadya.sendMessage(msg.to, "Restart Sukses Bos!...")
                                Setmain["restartPoint"] = msg.to
                                restartBot()
                             
@@ -3309,12 +3309,12 @@ def bot(op):
                             if msg._from in admin:
                                eltime = time.time() - mulai
                                bot = "Aktif " +waktu(eltime)
-                               ptatan1983.sendMessage(msg.to,bot)
+                               nadya.sendMessage(msg.to,bot)
                             
                         elif cmd == "ginfo":
                           if msg._from in admin:
                             try:
-                                G = ptatan1983.getGroup(msg.to)
+                                G = nadya.getGroup(msg.to)
                                 if G.invitee is None:
                                     gPending = "0"
                                 else:
@@ -3327,11 +3327,11 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(ptatan1983.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                ptatan1983.sendMessage(msg.to, "┏━━[ BOT Grup Info]\n┃┃ Nama Group : {}".format(G.name)+ "\n┃┃ ID Group : {}".format(G.id)+ "\n┃┃ Pembuat : {}".format(G.creator.displayName)+ "\n┃┃ Waktu Dibuat : {}".format(str(timeCreated))+ "\n┃┃ Jumlah Member : {}".format(str(len(G.members)))+ "\n┃┃ Jumlah Pending : {}".format(gPending)+ "\n┃┃ Group Qr : {}".format(gQr)+ "\n┃┃ Group Ticket : {}".format(gTicket))
-                                ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': G.creator.mid}, contentType=13)
-                                ptatan1983.sendImageWithURL(msg.to, 'http://dl.profile.line-cdn.net/'+G.pictureStatus)
+                                nadya.sendMessage(msg.to, "┏━━[ BOT Grup Info]\n┃┃ Nama Group : {}".format(G.name)+ "\n┃┃ ID Group : {}".format(G.id)+ "\n┃┃ Pembuat : {}".format(G.creator.displayName)+ "\n┃┃ Waktu Dibuat : {}".format(str(timeCreated))+ "\n┃┃ Jumlah Member : {}".format(str(len(G.members)))+ "\n┃┃ Jumlah Pending : {}".format(gPending)+ "\n┃┃ Group Qr : {}".format(gQr)+ "\n┃┃ Group Ticket : {}".format(gTicket))
+                                nadya.sendMessage(msg.to, None, contentMetadata={'mid': G.creator.mid}, contentType=13)
+                                nadya.sendImageWithURL(msg.to, 'http://dl.profile.line-cdn.net/'+G.pictureStatus)
                             except Exception as e:
-                                ptatan1983.sendMessage(msg.to, str(e))
+                                nadya.sendMessage(msg.to, str(e))
 
                         elif cmd.startswith("infogrup "):
                           if msg._from in admin:
