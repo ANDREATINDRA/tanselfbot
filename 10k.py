@@ -2846,82 +2846,82 @@ def bot(op):
                     if Setmain["Addimage"] == True:
                         msgid = msg.id
                         fotoo = "https://obs.line-apps.com/talk/m/download.nhn?oid="+msgid
-                        headers = ptatan1983.Talk.Headers
+                        headers = nadya.Talk.Headers
                         r = requests.get(fotoo, headers=headers, stream=True)
                         if r.status_code == 200:
                             path = os.path.join(os.path.dirname(__file__), 'dataPhotos/%s.jpg' % Setmain["Img"])
                             with open(path, 'wb') as fp:
                                 shutil.copyfileobj(r.raw, fp)
-                            ptatan1983.sendMessage(msg.to, "Berhasil menambahkan gambar")
+                            nadya.sendMessage(msg.to, "Berhasil menambahkan gambar")
                         Setmain["Img"] = {}
                         Setmain["Addimage"] = False
 
                if msg.toType == 2:
                  if msg._from in admin:
                    if settings["groupPicture"] == True:
-                     path = ptatan1983.downloadObjectMsg(msg_id)
+                     path = nadya.downloadObjectMsg(msg_id)
                      settings["groupPicture"] = False
-                     ptatan1983.updateGroupPicture(msg.to, path)
-                     ptatan1983.sendMessage(msg.to, "Berhasil mengubah foto group")
+                     nadya.updateGroupPicture(msg.to, path)
+                     nadya.sendMessage(msg.to, "Berhasil mengubah foto group")
 
                if msg.contentType == 1:
                    if msg._from in admin:
-                       if mid in Setmain["ptatan1983foto"]:
-                            path = aditmadzs.downloadObjectMsg(msg_id)
-                            del Setmain["ADITMADZSfoto"][mid]
-                            ptatan1983.updateProfilePicture(path)
-                            ptatan1983.sendMessage(msg.to,"Foto berhasil dirubah")
+                       if mid in Setmain["nadyafoto"]:
+                            path = nadya.downloadObjectMsg(msg_id)
+                            del Setmain["nadyafoto"][mid]
+                            nadya.updateProfilePicture(path)
+                            nadya.sendMessage(msg.to,"Foto berhasil dirubah")
 
                if msg.contentType == 1:
                  if msg._from in admin:
-                        if Amid in Setmain["ptatan1983foto"]:
+                        if Amid in Setmain["nadyafoto"]:
                             path = ki.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Amid]
+                            del Setmain["nadyafoto"][Amid]
                             ki.updateProfilePicture(path)
                             ki.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Bmid in Setmain["ptatan1983foto"]:
+                        elif Bmid in Setmain["nadyafoto"]:
                             path = kk.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Bmid]
+                            del Setmain["nadyafoto"][Bmid]
                             kk.updateProfilePicture(path)
                             kk.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Cmid in Setmain["ptatan1983foto"]:
+                        elif Cmid in Setmain["nadyafoto"]:
                             path = kc.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Cmid]
+                            del Setmain["nadyafoto"][Cmid]
                             kc.updateProfilePicture(path)
                             kc.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Dmid in Setmain["ptatan1983foto"]:
+                        elif Dmid in Setmain["nadyafoto"]:
                             path = kb.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Dmid]
+                            del Setmain["nadyafoto"][Dmid]
                             kb.updateProfilePicture(path)
                             kb.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Emid in Setmain["ptatan1983foto"]:
+                        elif Emid in Setmain["nadyafoto"]:
                             path = kd.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Emid]
+                            del Setmain["nadyafoto"][Emid]
                             kd.updateProfilePicture(path)
                             kd.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Fmid in Setmain["ptatan1983foto"]:
+                        elif Fmid in Setmain["nadyafoto"]:
                             path = ke.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Fmid]
+                            del Setmain["nadyafoto"][Fmid]
                             ke.updateProfilePicture(path)
                             ke.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Gmid in Setmain["ptatan1983foto"]:
+                        elif Gmid in Setmain["nadyafoto"]:
                             path = kf.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Gmid]
+                            del Setmain["nadyafoto"][Gmid]
                             kf.updateProfilePicture(path)
                             kf.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Hmid in Setmain["ptatan1983foto"]:
+                        elif Hmid in Setmain["nadyafoto"]:
                             path = kg.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Hmid]
+                            del Setmain["nadyafoto"][Hmid]
                             kg.updateProfilePicture(path)
                             kg.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Imid in Setmain["ptatan1983foto"]:
+                        elif Imid in Setmain["nadyafoto"]:
                             path = kh.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Imid]
+                            del Setmain["nadyafoto"][Imid]
                             kh.updateProfilePicture(path)
                             kh.sendMessage(msg.to,"Foto berhasil dirubah")
-                        elif Zmid in Setmain["ptatan1983foto"]:
+                        elif Zmid in Setmain["nadyafoto"]:
                             path = sw.downloadObjectMsg(msg_id)
-                            del Setmain["ptatan1983foto"][Zmid]
+                            del Setmain["nadyafoto"][Zmid]
                             sw.updateProfilePicture(path)
                             sw.sendMessage(msg.to,"Foto berhasil dirubah")
 
@@ -2982,70 +2982,70 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage = help()
-                               ptatan1983.sendMessage(msg.to, str(helpMessage))
-                               ptatan1983.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
+                               nadya.sendMessage(msg.to, str(helpMessage))
+                               nadya.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
                                
                         if cmd == "self on":
                             if msg._from in admin:
                                 wait["selfbot"] = True
-                                ptatan1983.sendMessage(msg.to, "Selfbot diaktifkan")
+                                nadya.sendMessage(msg.to, "Selfbot diaktifkan")
                                 
                         elif cmd == "self off":
                             if msg._from in admin:
                                 wait["selfbot"] = False
-                                ptatan1983.sendMessage(msg.to, "Selfbot dinonaktifkan")
+                                nadya.sendMessage(msg.to, "Selfbot dinonaktifkan")
                                             
                         elif cmd == "help2":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage1 = helpcreator()
-                               ptatan1983.sendMessage(msg.to, str(helpMessage1))
-                               ptatan1983.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
+                               nadya.sendMessage(msg.to, str(helpMessage1))
+                               nadya.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
                                
                         elif cmd == "help3":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage4 = helpadmin()
-                               ptatan1983.sendMessage(msg.to, str(helpMessage4))
-                               ptatan1983.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
+                               nadya.sendMessage(msg.to, str(helpMessage4))
+                               nadya.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
                                
                         elif cmd == "help4":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage5 = helpsetting()
-                               ptatan1983.sendMessage(msg.to, str(helpMessage5))
-                               ptatan1983.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
+                               nadya.sendMessage(msg.to, str(helpMessage5))
+                               nadya.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
                                
                         elif cmd == "help5":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage6 = helpprotect()
-                               ptatan1983.sendMessage(msg.to, str(helpMessage6))
-                               ptatan1983.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
+                               nadya.sendMessage(msg.to, str(helpMessage6))
+                               nadya.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
                                
                         elif cmd == "help6":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage8 = helpbot()
-                               ptatan1983.sendMessage(msg.to, str(helpMessage8))
-                               ptatan1983.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
+                               nadya.sendMessage(msg.to, str(helpMessage8))
+                               nadya.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
                                
                         elif cmd == "help7":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                helpMessage3 = helpblacklist()
-                               ptatan1983.sendMessage(msg.to, str(helpMessage3))
-                               ptatan1983.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
+                               nadya.sendMessage(msg.to, str(helpMessage3))
+                               nadya.sendContact(to, "ucd986d9e5c6126e70ed3b1ff06dfbf2d")
                                
                         if cmd == "unsend on":
                             if msg._from in admin:
                                 wait["unsend"] = True
-                                ptatan1983.sendMessage(msg.to, "Deteksi Unsend Diaktifkan")
+                                nadya.sendMessage(msg.to, "Deteksi Unsend Diaktifkan")
                                 
                         if cmd == "unsend off":
                             if msg._from in admin:
                                 wait["unsend"] = False
-                                ptatan1983.sendMessage(msg.to, "Deteksi Unsend Dinonaktifkan")                                
+                                nadya.sendMessage(msg.to, "Deteksi Unsend Dinonaktifkan")                                
 
                         elif cmd == "status":
                           if wait["selfbot"] == True:
@@ -3083,21 +3083,21 @@ def bot(op):
                                 else: md+="┃🇦🇱┃ ✖ Blockjs「OFF」\n"  
                                 if msg.to in ghost: md+="┃🇦🇱┃ ✔️ Ghost「ON」\n"
                                 else: md+="┃🇦🇱┃ ✖ Ghost「OFF」\n"
-                                ptatan1983.sendMessage(msg.to, md+"-▬▬▬▬▬▬▬▬▬▬▬▬\n┃☬ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n┃☬ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n-▬▬▬▬▬▬▬▬▬▬▬▬")
+                                nadya.sendMessage(msg.to, md+"-▬▬▬▬▬▬▬▬▬▬▬▬\n┃☬ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n┃☬ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n-▬▬▬▬▬▬▬▬▬▬▬▬")
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
-                                ptatan1983.sendMessage(msg.to,"Creator Bot") 
+                                nadya.sendMessage(msg.to,"Creator Bot") 
                                 ma = ""
                                 for i in creator:
-                                    ma = ptatan1983.getContact(i)
-                                    ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
+                                    ma = nadya.getContact(i)
+                                    nadya.sendMessage(msg.to, None, contentMetadata={'mid': i}, contentType=13)
 
                         elif cmd == "about" or cmd == "About":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                sendMention(msg.to, sender, "┏━━[ BY:TANBOTMEVERDIE✯͜͡❂➣ ]\n")
-                               ptatan1983.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
+                               nadya.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
                         elif cmd == "me" or text.lower() == 'mek':
                           if wait["selfbot"] == True:
